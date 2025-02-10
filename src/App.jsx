@@ -15,6 +15,8 @@ import Cart from "./components/Cart/Cart";
 import Men from "./components/Mens section/Mens";
 import Women from "./components/Women section/Women";
 import Kids from "./components/Kids section/Kids";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const [cartItems, setCartItems] = useState([]); // Store cart items
@@ -74,6 +76,8 @@ function App() {
           <Route path="/womens" element={<Women addToCart={addToCart} />} />
           <Route path="/kids" element={<Kids addToCart={addToCart} />} />
           <Route path="/cart" element={<Cart cartItems={cartItems} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         <Footer />
