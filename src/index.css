@@ -1,0 +1,33 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }  /* Shift only half for infinite loop */
+  }
+  
+  .scroll-container {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 92vw;  /* Full width */
+  }
+  
+  .scroll-content {
+    display: flex;
+    gap: 1rem; /* Adjust spacing */
+    min-width: 200%; /* Ensures continuous scrolling */
+    animation: scroll 15s linear infinite;
+  }
+  
+  /* 🛑 Hover Pause Effect (Optional) */
+  .scroll-container:hover .scroll-content {
+    /* animation-play-state: paused; */
+  }
+
+  
+  
