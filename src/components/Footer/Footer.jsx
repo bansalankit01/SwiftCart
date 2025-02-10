@@ -103,19 +103,19 @@ const Footer = () => {
                 <ul className="flex flex-col gap-3 text-gray-900 dark:text-gray-400 cursor-pointer">
                   <a href="#">
                     <li className="flex gap-3 text-md hover:text-primary hover:translate-x-1 duration-300">
-                      <FaFacebook className="md:text-3xl text-2xl hover:text-primary hover:translate-x-1 duration-300 text-gray-700 dark:text-gray-400" />
+                      <FaFacebook className="md:text-3xl text-2xl hover:text-primary dark:hover:text-primary hover:translate-x-1 duration-300 text-gray-700 dark:text-gray-400" />
                       Facebook
                     </li>
                   </a>
                   <li className="flex gap-3 text-md hover:text-pink-600 hover:translate-x-1 duration-300">
                     <a href="#">
-                      <FaInstagram className="md:text-3xl  text-2xl hover:text-pink-600 hover:translate-x-1 duration-300 text-gray-700 dark:text-gray-400" />
+                      <FaInstagram className="md:text-3xl  text-2xl hover:text-pink-600 dark:hover:text-pink-600 hover:translate-x-1 duration-300 text-gray-700 dark:text-gray-400" />
                     </a>
                     Instagram
                   </li>
                   <li className="flex gap-3 text-md hover:text-cyan-600 hover:translate-x-1 duration-300">
                     <a href="#">
-                      <FaLinkedin className="md:text-3xl text-2xl hover:text-cyan-600 hover:translate-x-1 duration-300 text-gray-700 dark:text-gray-400" />
+                      <FaLinkedin className="md:text-3xl text-2xl hover:text-cyan-600 dark:hover:text-cyan-600 hover:translate-x-1 duration-300 text-gray-700 dark:text-gray-400" />
                     </a>
                     Linkedin{" "}
                   </li>

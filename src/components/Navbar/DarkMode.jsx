@@ -1,6 +1,6 @@
 import  { useEffect, useState } from 'react';
-import DarkButton from "../../assets/website/light-photoroom.png";
-import LightButton from "../../assets/website/dark-photoroom.png";
+import  LightButton from "../../assets/website/light-photoroom.png";
+import DarkButton from "../../assets/website/dark-photoroom.png";
 
 function DarkMode() {
 
