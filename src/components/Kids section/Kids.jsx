@@ -202,7 +202,7 @@ const Kids = ({ addToCart }) => {
         >
           <h1
             data-aos="fade-up"
-            className="md:text-4xl text-3xl mt-2 md:mt-6 font-bold"
+            className="md:text-4xl text-3xl mt-10 md:mt-6 font-bold"
           >
             𝑲𝒊𝒅𝒔 𝑪𝒐𝒍𝒍𝒆𝒄𝒕𝒊𝒐𝒏
           </h1>

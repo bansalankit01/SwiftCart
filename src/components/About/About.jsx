@@ -87,7 +87,7 @@ const About = () => {
                       <img
                         src={data.img}
                         alt="Sale"
-                        className=" mt-[-15px] md:mt-[-20px] w-[750px] h-[300px] sm:h-[400px] sm:w-[780px]  sm:scale-105 lg:scale-120 object-contain md:mx-auto mx-[-5px]"
+                        className=" mt-[-1px] md:mt-[-20px] w-[750px] h-[300px]  sm:h-[400px] sm:w-[780px]  sm:scale-105 lg:scale-120 object-contain md:mx-auto mx-[-5px]"
                       />
                     </div>
                   </div>
@@ -100,14 +100,13 @@ const About = () => {
       <hr />
         <br />
         <br />
-        <br />
       <div className="min-h-[550px] flex justify-center items-center py-12 sm:py-0">
         <div className="conatiner">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
             <div data-aos="zoom-in">
               <img
                 data-aos="fade-up"
-                className="md:max-w-[550px] max-w-[350px] md:h-[400px] w-full mx-auto object-cover"
+                className="md:max-w-[550px] max-w-[450px] mt-[-10px] md:h-[400px] w-full mx-auto object-cover"
                 src="https://img.freepik.com/free-vector/about-us-concept-illustration_114360-669.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_incoming"
                 alt="about us image"
               />
@@ -170,7 +169,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <br />
       <br />
       <br />
       <hr />

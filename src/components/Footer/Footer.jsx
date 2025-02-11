@@ -51,13 +51,12 @@ const Footer = () => {
                 𝑮𝒆𝒕 𝒕𝒐 𝒌𝒏𝒐𝒘 𝒖𝒔
                 </h1>
                 <ul className="flex flex-col gap-3  text-gray-900 dark:text-gray-400 cursor-pointer">
-                  <a href="#">
+                  <Link to="/">
                     <li className="flex gap-3 text-md hover:text-primary hover:translate-x-1 duration-300">
                       Home
                     </li>
-                  </a>
-                  <Link to="about">
-                    {" "}
+                  </Link>
+                  <Link to="/about">
                     <li className="flex text-md hover:text-primary hover:translate-x-1 duration-300">
                       About Us
                     </li>
@@ -88,7 +87,7 @@ const Footer = () => {
                   </Link>
                   <Link to="/kids">
                     <li className="flex text-md hover:text-primary hover:translate-x-1 duration-300">
-                      Kids Collection{" "}
+                      Kids Collection
                     </li>
                   </Link>
                 </ul>
@@ -97,7 +96,7 @@ const Footer = () => {
 
             <div>
               <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-black dark:text-gray-200 text-xl font-bold sm:text-left text-justify mb-3">
+                <h1 className="sm:text-xl text-black dark:text-gray-200 text-xl font-bold sm:text-left mb-3">
                 𝑪𝒐𝒏𝒏𝒆𝒄𝒕 𝑾𝒊𝒕𝒉 𝒖𝒔
                 </h1>
                 <ul className="flex flex-col gap-3 text-gray-900 dark:text-gray-400 cursor-pointer">
@@ -117,7 +116,7 @@ const Footer = () => {
                     <a href="#">
                       <FaLinkedin className="md:text-3xl text-2xl hover:text-cyan-600 dark:hover:text-cyan-600 hover:translate-x-1 duration-300 text-gray-700 dark:text-gray-400" />
                     </a>
-                    Linkedin{" "}
+                    Linkedin
                   </li>
                 </ul>
               </div>
@@ -127,7 +126,7 @@ const Footer = () => {
       </div>
       <hr />
       <div  className=" md:h-[50px] h-[40px]">
-        <div className="md:mt-6 mt-3 mx-2 md:mx-[440px] md:text-xl text-xs text-gray-900 dark:text-gray-400">
+        <div className="md:mt-6 mt-5 mx-6 md:mx-[440px] md:text-xl text-xs text-gray-900 dark:text-gray-400">
           © 𝒄𝒐𝒑𝒚𝒓𝒊𝒈𝒉𝒕 @ 2025 𝒃𝒚{" "}
           <span className="text-primary"> 𝑴𝒓. 𝑨𝒏𝒌𝒊𝒕 𝑩𝒂𝒏𝒔𝒂𝒍</span> | 𝒂𝒍𝒍 𝒓𝒊𝒈𝒉𝒕
           𝒓𝒆𝒔𝒆𝒓𝒗𝒆𝒅!

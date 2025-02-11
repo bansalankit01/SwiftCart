@@ -44,14 +44,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[580px] flex justify-center items-center duration-200">
+    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[500px] flex justify-center items-center duration-200">
       {/* Gradient Background based on the Theme (Light Mode vs Dark Mode) */}
       <div className="absolute inset-0 z-0">
-        <div className="bg-pink-100   dark:bg-gray-900 w-full h-full"></div>
+        <div className="bg-red-100   dark:bg-gray-900 w-full h-full"></div>
       </div>
 
       {/* Hero Section */}
-      <div className="container pb-8 sm:pb-0 relative z-10">
+      <div className="container pb-8 sm:pb-0 relative z-10 ">
         <Slider {...settings}>
           {ImageList.map((data) => (
             <div key={data.id} className="relative group">
@@ -62,7 +62,7 @@ const Hero = () => {
                     data-aos="zoom-out"
                     data-aos-duration="500"
                     data-aos-once="true"
-                    className="text-xl md:text-6xl font-bold md:mt-16 mt-[-35px]"
+                    className="text-xl md:text-6xl font-bold md:mt-1 mt-[-35px]"
                   >
                     {data.title}
                   </h1>
@@ -101,7 +101,7 @@ const Hero = () => {
                     <img
                       src={data.img}
                       alt="Sale"
-                      className=" mt-16 w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
+                      className="mt-1 w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
                     />
                   </div>
                 </div>

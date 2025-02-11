@@ -3,7 +3,7 @@
 const Cart = ({ cartItems }) => {
     return (
       <div className="p-[80px] mx-auto max-w-[600px]">
-        <h2 data-aos="fade-up" className="md:text-4xl text-xl mt-[-50px] mx-20 font-semibold text-gray-800 dark:text-white md:mx-32 mb-4">𝒀𝒐𝒖𝒓 𝑪𝒂𝒓𝒕</h2>
+        <h2 data-aos="fade-up" className="md:text-4xl text-xl mt-[-50px] mx-16 font-semibold text-gray-800 dark:text-white md:mx-32 mb-4">𝒀𝒐𝒖𝒓 𝑪𝒂𝒓𝒕</h2>
         {cartItems.length === 0 ? (
           <p data-aos="fade-up" className="text-gray-600 dark:text-gray-400 md:mx-28 md:mt-10 mx-[-20px]">Your cart is currently empty.</p>
         ) : (

@@ -211,11 +211,11 @@ const Women = ({ addToCart }) => {
         {/* Header section */}
         <div
           data-aos="fade-up"
-          className="container text-center md:mt-16 mt-[26px] md:mb-26 mb-14 max-w-[600px] mx-auto"
+          className="container text-center md:mt-16 mt-[30px] md:mb-26 mb-14 max-w-[600px] mx-auto"
         >
           <h1
             data-aos="fade-up"
-            className="md:text-4xl text-3xl mt-2 md:mt-6 font-bold"
+            className="md:text-4xl text-3xl mt-10 md:mt-6 font-bold"
           >
             𝑾𝒐𝒎𝒆𝒏𝒔 𝑪𝒐𝒍𝒍𝒆𝒄𝒕𝒊𝒐𝒏
           </h1>
