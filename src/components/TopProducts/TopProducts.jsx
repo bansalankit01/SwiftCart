@@ -28,7 +28,7 @@ const TopProducts = ({ addToCart }) => {
     <div>
       <div id="bestselling" className="container">
         <div className="text-center mt-[-18px] mb-12 max-w-[600px] mx-auto">
-          <h1 data-aos="fade-up" className="md:text-4xl text-2xl mt-2 md:mt-6 font-bold">
+          <h1 data-aos="fade-up" className="md:text-4xl text-2xl mt-2 font-bold">
             𝑩𝒆𝒔𝒕 𝑺𝒆𝒍𝒍𝒊𝒏𝒈 𝑷𝒊𝒄𝒌𝒔
           </h1>
         </div>

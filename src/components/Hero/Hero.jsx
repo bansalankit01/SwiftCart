@@ -44,7 +44,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[500px] flex justify-center items-center duration-200">
+    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[570px] flex justify-center items-center duration-200">
       {/* Gradient Background based on the Theme (Light Mode vs Dark Mode) */}
       <div className="absolute inset-0 z-0">
         <div className="bg-red-100   dark:bg-gray-900 w-full h-full"></div>

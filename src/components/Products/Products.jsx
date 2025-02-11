@@ -70,7 +70,7 @@ const Products = () => {
       <div id="trendingdeal" className="mt-8 md:mt-10 mb-12 overflow-hidden">
         <div  className="container">
           <div className="text-center mb-12 max-w-[600px] mx-auto">
-            <h1 className="md:text-4xl text-2xl mt-2 md:mt-10 font-bold">
+            <h1 className="md:text-4xl text-2xl mt-2 font-bold">
               𝑻𝒓𝒆𝒏𝒅𝒊𝒏𝒈 𝑫𝒆𝒂𝒍𝒔 & 𝑶𝒇𝒇𝒆𝒓
             </h1>
           </div>
