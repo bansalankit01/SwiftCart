@@ -222,7 +222,7 @@ const Women = ({ addToCart }) => {
         </div>
 
         {/* Body section */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 place-items-center">
+        <div data-aos="fade-up" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 place-items-center">
           {ProductsData.map((product) => (
             <div key={product.id} className="rounded-2xl text-center bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white shadow-xl duration-300 group w-full sm:w-[200px] md:w-[250px] h-[350px] flex flex-col justify-between">
               <div className="h-[150px] flex items-center justify-center">

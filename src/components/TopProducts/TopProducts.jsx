@@ -26,16 +26,16 @@ const ProductsData = [
 const TopProducts = ({ addToCart }) => {
   return (
     <div>
-      <div id="bestselling" className="container">
+      <div id="bestselling" data-aos="fade-up" className="container">
         <div className="text-center mt-[-18px] mb-12 max-w-[600px] mx-auto">
           <h1 data-aos="fade-up" className="md:text-4xl text-2xl mt-2 font-bold">
             𝑩𝒆𝒔𝒕 𝑺𝒆𝒍𝒍𝒊𝒏𝒈 𝑷𝒊𝒄𝒌𝒔
           </h1>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 place-items-center">
+        <div data-aos="fade-up" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 place-items-center">
           {ProductsData.map((product) => (
-            <div key={product.id} className="rounded-2xl text-center bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white shadow-xl duration-300 group w-full sm:w-[200px] md:w-[250px] h-[350px] flex flex-col justify-between">
+            <div  key={product.id} className="rounded-2xl text-center bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white shadow-xl duration-300 group w-full sm:w-[200px] md:w-[250px] h-[350px] flex flex-col justify-between">
               <div className="h-[160px] flex items-center justify-center">
                 <img src={product.img} alt={product.title} className="max-w-[110px] md:mt-10 md:max-w-[150px] object-contain block mx-auto transform group-hover:scale-105 duration-300 drop-shadow-md" />
               </div>
