@@ -35,20 +35,20 @@ const TopProducts = ({ addToCart }) => {
 
         <div data-aos="fade-up" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 place-items-center">
           {ProductsData.map((product) => (
-            <div  key={product.id} className="rounded-2xl text-center bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white shadow-xl duration-300 group w-full sm:w-[200px] md:w-[250px] h-[350px] flex flex-col justify-between">
+            <div  key={product.id} className="rounded-2xl text-center bg-white dark:bg-gray-800  shadow-xl duration-300 group w-full sm:w-[200px] md:w-[250px] h-[350px] flex flex-col justify-between">
               <div className="h-[160px] flex items-center justify-center">
-                <img src={product.img} alt={product.title} className="max-w-[110px] md:mt-10 md:max-w-[150px] object-contain block mx-auto transform group-hover:scale-105 duration-300 drop-shadow-md" />
+                <img src={product.img} alt={product.title} className="max-w-[110px] md:mt-10 md:max-w-[150px] object-contain block mx-auto transform duration-300 drop-shadow-md" />
               </div>
               <div className="p-4 flex flex-col justify-between flex-grow">
                 <h1 className="text-sm font-bold line-clamp-2 md:mt-6">{product.title}</h1>
-                <div className="flex gap-1 md:mx-16 md:mt-3">
+                <div className="flex gap-1 mt-3 mx-8 md:mx-16 md:mt-3">
                   {[...Array(5)].map((_, i) => (
                     <FaStar key={i} className="text-yellow-500" />
                   ))}
                 </div>
-                <p className="text-red-500 font-bold md:mt-1 text-sm mt-4">{product.price}</p>
+                <p className="text-red-500 font-bold md:mt-2 text-sm mt-4">{product.price}</p>
                 <button 
-                  className="bg-primary hover:scale-105 duration-300 md:mt-3 text-white py-1 rounded-md mt-auto group-hover:bg-white group-hover:text-primary"
+                  className="bg-primary hover:scale-105 duration-300 md:mt-3 text-white py-1 rounded-md mt-auto group-hover:bg-sky-800  dark:group-hover:bg-white dark:group-hover:text-primary"
                   onClick={() => addToCart(product)}
                 >
                   Add to Cart
