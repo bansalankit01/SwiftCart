@@ -1,3 +1,6 @@
+Check out the live version of the project here: https://swifttcartt.netlify.app/
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
