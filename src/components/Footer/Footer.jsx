@@ -19,13 +19,12 @@ import companyname from "../../assets/website/companyname.png";
 
 const Footer = () => {
   return (
-    <div className="text-white bg-cyan-200 dark:bg-cyan-800 ">
+    <div className="text-white bg-pink-300/20 dark:bg-yellow-100/20 bg-opacity-30 backdrop-blur-lg border border-white/20 dark:border-white/30">
       <div className="container md:h-[400px]">
         <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-10 pt-8">
-          {/* company details */}
+          {/* Company Details */}
           <div className="py-8 px-4 md:mt-2">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-1">
-              
               <Link to="/" className="font-bold text-xl items-center h-6 flex">
                 <img
                   src={companyname}
@@ -48,9 +47,9 @@ const Footer = () => {
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-black dark:text-gray-200 text-xl font-bold sm:text-left mb-3">
-                𝑮𝒆𝒕 𝒕𝒐 𝒌𝒏𝒐𝒘 𝒖𝒔
+                  𝑮𝒆𝒕 𝒕𝒐 𝒌𝒏𝒐𝒘 𝒖𝒔
                 </h1>
-                <ul className="flex flex-col gap-3  text-gray-900 dark:text-gray-400 cursor-pointer">
+                <ul className="flex flex-col gap-3 text-gray-900 dark:text-gray-400 cursor-pointer">
                   <Link to="/">
                     <li className="flex gap-3 text-md hover:text-primary hover:translate-x-1 duration-300">
                       Home
@@ -69,10 +68,11 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
+
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-black dark:text-gray-200 text-xl font-bold sm:text-left text-justify mb-3">
-                𝑰𝒎𝒑𝒐𝒓𝒕𝒂𝒏𝒕 𝑳𝒊𝒏𝒌𝒔
+                  𝑰𝒎𝒑𝒐𝒓𝒕𝒂𝒏𝒕 𝑳𝒊𝒏𝒌𝒔
                 </h1>
                 <ul className="flex flex-col gap-3 text-gray-900 dark:text-gray-400 cursor-pointer">
                   <Link to="/mens">
@@ -97,7 +97,7 @@ const Footer = () => {
             <div>
               <div className="py-8 px-4">
                 <h1 className="sm:text-xl text-black dark:text-gray-200 text-xl font-bold sm:text-left mb-3">
-                𝑪𝒐𝒏𝒏𝒆𝒄𝒕 𝑾𝒊𝒕𝒉 𝒖𝒔
+                  𝑪𝒐𝒏𝒏𝒆𝒄𝒕 𝑾𝒊𝒕𝒉 𝒖𝒔
                 </h1>
                 <ul className="flex flex-col gap-3 text-gray-900 dark:text-gray-400 cursor-pointer">
                   <a href="#">
@@ -108,7 +108,7 @@ const Footer = () => {
                   </a>
                   <li className="flex gap-3 text-md hover:text-pink-600 hover:translate-x-1 duration-300">
                     <a href="#">
-                      <FaInstagram className="md:text-3xl  text-2xl hover:text-pink-600 dark:hover:text-pink-600 hover:translate-x-1 duration-300 text-gray-700 dark:text-gray-400" />
+                      <FaInstagram className="md:text-3xl text-2xl hover:text-pink-600 dark:hover:text-pink-600 hover:translate-x-1 duration-300 text-gray-700 dark:text-gray-400" />
                     </a>
                     Instagram
                   </li>
@@ -125,11 +125,9 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div  className=" md:h-[50px] h-[60px]">
+      <div className="md:h-[50px] h-[60px]">
         <div className="md:mt-6 mt-5 mx-6 md:mx-[440px] md:text-xl text-xl text-gray-900 dark:text-gray-400">
-          © 𝒄𝒐𝒑𝒚𝒓𝒊𝒈𝒉𝒕 @ 2025 𝒃𝒚{" "}
-          <span className="text-primary"> 𝑴𝒓. 𝑨𝒏𝒌𝒊𝒕 𝑩𝒂𝒏𝒔𝒂𝒍</span> | 𝒂𝒍𝒍 𝒓𝒊𝒈𝒉𝒕
-          𝒓𝒆𝒔𝒆𝒓𝒗𝒆𝒅!
+          © 𝒄𝒐𝒑𝒚𝒓𝒊𝒈𝒉𝒕 @ 2025 𝒃𝒚 <span className="text-primary"> 𝑴𝒓. 𝑨𝒏𝒌𝒊𝒕 𝑩𝒂𝒏𝒔𝒂𝒍</span> | 𝒂𝒍𝒍 𝒓𝒊𝒈𝒉𝒕 𝒓𝒆𝒔𝒆𝒓𝒗𝒆𝒅!
         </div>
       </div>
     </div>
@@ -137,3 +135,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
