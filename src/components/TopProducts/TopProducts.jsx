@@ -48,7 +48,7 @@ const TopProducts = ({ addToCart }) => {
                 </div>
                 <p className="text-red-500 font-bold md:mt-2 text-sm mt-4">{product.price}</p>
                 <button 
-                  className="bg-primary hover:scale-105 duration-300 md:mt-3 text-white py-1 rounded-md mt-auto group-hover:bg-sky-800  dark:group-hover:bg-white dark:group-hover:text-primary"
+                  className="bg-primary hover:scale-105 duration-300 md:mt-3 text-white py-1 rounded-md mt-auto hover:bg-sky-800  dark:group-hover:bg-white dark:group-hover:text-primary"
                   onClick={() => addToCart(product)}
                 >
                   Add to Cart

@@ -56,7 +56,7 @@ const Navbar = ({ cartItems }) => {
           {/* Logo */}
           <Link to="/" className="font-bold text-xl items-center h-6 flex">
             {/* <img src={logo} width="58px"  /> */}
-            <img src={companyname} width="230px" className="md:mx-[-35px] mx-[-18px]" alt="" />
+            <img src={companyname}  className="md:mx-[-35px] mx-[-25px] md:w-[230px] w-[210px]" alt="" />
           </Link>
 
           {/* Search Bar */}
@@ -65,42 +65,52 @@ const Navbar = ({ cartItems }) => {
             <div className="sm:hidden flex gap-3">
               {/* Cart Button */}
               <div className="relative">
-                <Link to="/cart" className="bg-primary text-white py-2 px-4 rounded-lg flex items-center">
-                  <FaCartShopping className="text-xl text-white" />
+                <Link to="/cart" className=" text-white py-2 px-1 rounded-lg flex items-center">
+                  <FaCartShopping className=" text-3xl text-black dark:text-white" />
                 </Link>
                 {cartItemCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                  <span className="absolute -top-0 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                     {cartItemCount}
                   </span>
                 )}
               </div>
               
               {/* Menu Button */}
-              <button onClick={() => setMenuOpen(!menuOpen)} className="text-4xl font-bold mt-[-4px] mx-3">
-                {menuOpen ? "✖" : "☰"}
+              <button onClick={() => setMenuOpen(!menuOpen)} className="text-3xl font-bold">
+                {menuOpen ? "❎" : "☰"}
               </button>
             </div>
 
-            {/* Desktop Search Bar */}
-            <div className="relative group hidden sm:block">
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-lg border border-gray-300 py-1 px-2 text-sm focus:outline-none focus:border-primary dark:border-gray-500 dark:bg-slate-800"
-              />
-              <IoMdSearch className="text-slate-10 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3" />
-            </div>
+            
           </div>
 
           {/* Desktop Cart & Dark Mode */}
-          <div className="hidden sm:flex justify-between items-center gap-4">
+           <div className="hidden sm:flex justify-between items-center gap-1">
+           
+           {/* Desktop Search Bar */}
+            <div className="relative group hidden sm:block mx-3">
+              <input
+                type="text"
+                placeholder="Search"
+                className="w-[300px] group-hover:w-[310px] transition-all duration-300 rounded-md md:h-9 border border-gray-300 py-1 px-2 text-sm focus:outline-none dark:border-gray-500 dark:bg-slate-800"
+              />
+              <IoMdSearch className="text-slate-10 absolute top-1/2 -translate-y-1/2 right-3" />
+             </div>
+
+                <button className="border-2 mx-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto" >
+                  Login
+                </button>
+                <button className="border-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto" >
+                  SignUp
+                </button>
+
             {/* Cart Button */}
             <div className="relative">
-              <Link to="/cart" className="bg-primary text-white  py-1 px-4 rounded-lg flex items-center">
-                <FaCartShopping className="text-xl text-white" />
+              <Link to="/cart" className=" text-white  py-1 px-4 rounded-lg flex items-center">
+                <FaCartShopping className="text-2xl text-black dark:text-white" />
               </Link>
               {cartItemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                <span className="absolute -top-1 -right-0 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                   {cartItemCount}
                 </span>
               )}
@@ -116,12 +126,22 @@ const Navbar = ({ cartItems }) => {
         <div className="bg-gray-100 dark:bg-slate-900 py-4">
           <ul className="flex flex-col items-center gap-5 w-full">
             {/* Search */}
+         
             <li>
               <input
                 type="text"
                 placeholder="Search"
-                className="w-[200px] rounded-lg border border-gray-300 py-1 px-2 text-sm focus:outline-none focus:border-primary dark:border-gray-500 dark:bg-slate-800"
+                className="w-[300px] rounded-lg border border-gray-300 py-1 px-2 text-sm focus:outline-none focus:border-primary dark:border-gray-500 dark:bg-slate-800"
               />
+            </li>
+
+            <li>
+            <button className="border-2 mx-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto" >
+                  Login
+                </button>
+                <button className="border-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto" >
+                  SignUp
+                </button>
             </li>
 
             {/* Nav Links */}

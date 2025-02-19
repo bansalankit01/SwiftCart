@@ -304,7 +304,7 @@ const Women = ({ addToCart }) => {
                 <div className="p-4 flex flex-col justify-between flex-grow">
                   <h1 className="text-sm font-bold line-clamp-2 mt-11">{product.title}</h1>
                   <p className="text-red-500 font-bold group-hover:text-red-500 duration-300 text-sm mt-4">₹{product.price}</p>
-                  <button className="bg-primary hover:scale-105 duration-300 text-white py-1 rounded-md mt-auto group-hover:bg-sky-800 dark:group-hover:bg-white dark:group-hover:text-primary" onClick={() => addToCart(product)}>
+                  <button className="bg-primary hover:scale-105 duration-300 text-white py-1 rounded-md mt-auto hover:bg-sky-800 dark:group-hover:bg-white dark:group-hover:text-primary" onClick={() => addToCart(product)}>
                     Add to cart
                   </button>
                 </div>

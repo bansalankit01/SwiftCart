@@ -125,8 +125,8 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div  className=" md:h-[50px] h-[40px]">
-        <div className="md:mt-6 mt-5 mx-6 md:mx-[440px] md:text-xl text-xs text-gray-900 dark:text-gray-400">
+      <div  className=" md:h-[50px] h-[60px]">
+        <div className="md:mt-6 mt-5 mx-6 md:mx-[440px] md:text-xl text-xl text-gray-900 dark:text-gray-400">
           © 𝒄𝒐𝒑𝒚𝒓𝒊𝒈𝒉𝒕 @ 2025 𝒃𝒚{" "}
           <span className="text-primary"> 𝑴𝒓. 𝑨𝒏𝒌𝒊𝒕 𝑩𝒂𝒏𝒔𝒂𝒍</span> | 𝒂𝒍𝒍 𝒓𝒊𝒈𝒉𝒕
           𝒓𝒆𝒔𝒆𝒓𝒗𝒆𝒅!

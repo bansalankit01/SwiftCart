@@ -47,7 +47,7 @@ const Hero = () => {
     <div className="relative overflow-hidden min-h-[550px] sm:min-h-[570px] flex justify-center items-center duration-200">
       {/* Gradient Background based on the Theme (Light Mode vs Dark Mode) */}
       <div className="absolute inset-0 z-0">
-        <div className="bg-red-100   dark:bg-gray-900 w-full h-full"></div>
+        {/* <div className="bg-red-100   dark:bg-gray-900 w-full h-full"></div> */}
       </div>
 
       {/* Hero Section */}
@@ -70,7 +70,7 @@ const Hero = () => {
                     data-aos="fade-up"
                     data-aos-duration="500"
                     data-aos-delay="100"
-                    className="text-md text-red-500 dark:text-red-500 "
+                    className="text-md text-gray-500 dark:text-gray-500 "
                   >
                     {data.description}
                   </p>
