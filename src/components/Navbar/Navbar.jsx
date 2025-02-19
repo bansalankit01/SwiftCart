@@ -6,7 +6,7 @@ import { FaCaretDown } from "react-icons/fa";
 import DarkMode from "./DarkMode";
 import { FiShoppingBag } from "react-icons/fi";
 // import logo from "../../assets/website/logo.png"
-import companyname from "../../assets/website/companyname.png"
+import companyname from "../../assets/website/companyname.png";
 
 const Menu = [
   { id: 1, name: "Home", link: "/" },
@@ -21,7 +21,6 @@ const DropdownLinks = [
 ];
 
 const Navbar = ({ cartItems }) => {
-
   const cartItemCount = cartItems.length; // Get number of items in cart
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -49,14 +48,18 @@ const Navbar = ({ cartItems }) => {
   };
 
   return (
-    <div className="shadow-md bg-white dark:bg-slate-800 dark:text-white duration-200 z-40 h-[125px] sticky top-0">
+    <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-white/20 dark:bg-slate-800/20 backdrop-blur-xl dark:text-white duration-200 z-40 h-[118px] sticky top-0 rounded-lg">
       {/* Upper Navbar */}
-      <div className="bg-cyan-200 dark:bg-cyan-800 py-5">
+      <div className="bg-white/20 dark:bg-cyan-800/20 backdrop-blur-xl border border-white/30 dark:border-slate-700/50 shadow-md py-4 rounded-lg">
         <div className="container flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="font-bold text-xl items-center h-6 flex">
             {/* <img src={logo} width="58px"  /> */}
-            <img src={companyname}  className="md:mx-[-35px] mx-[-25px] md:w-[230px] w-[210px]" alt="" />
+            <img
+              src={companyname}
+              className="md:mx-[-35px] mx-[-25px] md:w-[230px] w-[210px]"
+              alt=""
+            />
           </Link>
 
           {/* Search Bar */}
@@ -65,7 +68,10 @@ const Navbar = ({ cartItems }) => {
             <div className="sm:hidden flex gap-3">
               {/* Cart Button */}
               <div className="relative">
-                <Link to="/cart" className=" text-white py-2 px-1 rounded-lg flex items-center">
+                <Link
+                  to="/cart"
+                  className=" text-white py-2 px-1 rounded-lg flex items-center"
+                >
                   <FaCartShopping className=" text-3xl text-black dark:text-white" />
                 </Link>
                 {cartItemCount > 0 && (
@@ -74,20 +80,20 @@ const Navbar = ({ cartItems }) => {
                   </span>
                 )}
               </div>
-              
+
               {/* Menu Button */}
-              <button onClick={() => setMenuOpen(!menuOpen)} className="text-3xl font-bold">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="text-3xl font-bold"
+              >
                 {menuOpen ? "❎" : "☰"}
               </button>
             </div>
-
-            
           </div>
 
           {/* Desktop Cart & Dark Mode */}
-           <div className="hidden sm:flex justify-between items-center gap-1">
-           
-           {/* Desktop Search Bar */}
+          <div className="hidden sm:flex justify-between items-center gap-1">
+            {/* Desktop Search Bar */}
             <div className="relative group hidden sm:block mx-3">
               <input
                 type="text"
@@ -95,18 +101,14 @@ const Navbar = ({ cartItems }) => {
                 className="w-[300px] group-hover:w-[310px] transition-all duration-300 rounded-md md:h-9 border border-gray-300 py-1 px-2 text-sm focus:outline-none dark:border-gray-500 dark:bg-slate-800"
               />
               <IoMdSearch className="text-slate-10 absolute top-1/2 -translate-y-1/2 right-3" />
-             </div>
-
-                <button className="border-2 mx-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto" >
-                  Login
-                </button>
-                <button className="border-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto" >
-                  SignUp
-                </button>
+            </div>
 
             {/* Cart Button */}
             <div className="relative">
-              <Link to="/cart" className=" text-white  py-1 px-4 rounded-lg flex items-center">
+              <Link
+                to="/cart"
+                className=" text-white  py-1 px-3 rounded-lg flex items-center"
+              >
                 <FaCartShopping className="text-2xl text-black dark:text-white" />
               </Link>
               {cartItemCount > 0 && (
@@ -117,6 +119,13 @@ const Navbar = ({ cartItems }) => {
             </div>
 
             <DarkMode />
+
+            <button className="border-2 mx-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto">
+              Login
+            </button>
+            <button className="border-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto">
+              SignUp
+            </button>
           </div>
         </div>
       </div>
@@ -126,7 +135,7 @@ const Navbar = ({ cartItems }) => {
         <div className="bg-gray-100 dark:bg-slate-900 py-4">
           <ul className="flex flex-col items-center gap-5 w-full">
             {/* Search */}
-         
+
             <li>
               <input
                 type="text"
@@ -136,18 +145,21 @@ const Navbar = ({ cartItems }) => {
             </li>
 
             <li>
-            <button className="border-2 mx-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto" >
-                  Login
-                </button>
-                <button className="border-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto" >
-                  SignUp
-                </button>
+              <button className="border-2 mx-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto">
+                Login
+              </button>
+              <button className="border-2 border-black dark:border-white hover:scale-105 duration-300 text-black dark:text-white py-1 px-3 rounded-md mt-auto">
+                SignUp
+              </button>
             </li>
 
             {/* Nav Links */}
             {Menu.map((data) => (
               <li key={data.id}>
-                <Link to={data.link} className="inline-block px-4 hover:text-primary duration-200">
+                <Link
+                  to={data.link}
+                  className="inline-block px-4  hover:text-primary duration-200"
+                >
                   {data.name}
                 </Link>
               </li>
@@ -185,10 +197,13 @@ const Navbar = ({ cartItems }) => {
 
       {/* Desktop Navbar Links */}
       <div className="sm:flex justify-center hidden">
-        <ul className="sm:flex items-center md:gap-12 mt-1.5">
+        <ul className="sm:flex items-center md:gap-12 mt-1">
           {Menu.map((data) => (
             <li key={data.id}>
-              <Link to={data.link} className="inline-block px-8 hover:text-primary duration-200">
+              <Link
+                to={data.link}
+                className="inline-block px-8 hover:text-primary duration-200"
+              >
                 {data.name}
               </Link>
             </li>
