@@ -48,9 +48,9 @@ const Navbar = ({ cartItems }) => {
   };
 
   return (
-    <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-white/20 dark:bg-slate-800/20 backdrop-blur-xl dark:text-white duration-200 z-40 h-[118px] sticky top-0 rounded-lg">
+    <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-white/20 dark:bg-slate-800/20 backdrop-blur-xl dark:text-white duration-200 z-40 h-[118px] sticky top-0 rounded-sm">
       {/* Upper Navbar */}
-      <div className="bg-white/20 dark:bg-cyan-800/20 backdrop-blur-xl border border-white/30 dark:border-slate-700/50 shadow-md py-4 rounded-lg">
+      <div className="bg-white/20 dark:bg-cyan-300/20 backdrop-blur-xl border border-white/30 dark:border-slate-700/50 shadow-md py-4 rounded-sm">
         <div className="container flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="font-bold text-xl items-center h-6 flex">
