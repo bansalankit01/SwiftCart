@@ -48,7 +48,7 @@ const Navbar = ({ cartItems }) => {
     <div className="z-40 sticky top-0">
       {/* ===== Upper Navbar ===== */}
 
-      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-500/20 dark:bg-yellow-200/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm">
+      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-500/20 dark:bg-rose-800/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm">
         <div className="container flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="font-bold text-xl items-center h-6 flex">
@@ -114,7 +114,7 @@ const Navbar = ({ cartItems }) => {
 
       {/* ===== Lower Navbar ===== */}
 
-      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-300/20 dark:bg-yellow-100/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm mt-1">
+      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-300/20 dark:bg-rose-100/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm mt-1">
         <div className="sm:flex justify-center hidden">
           <ul className="sm:flex items-center md:gap-12 py-2">
             {Menu.map((data) => (

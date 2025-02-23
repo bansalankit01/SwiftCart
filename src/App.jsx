@@ -17,6 +17,7 @@ import Women from "./components/Women section/Women";
 import Kids from "./components/Kids section/Kids";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import { motion } from "framer-motion";
 
 function App() {
   const [cartItems, setCartItems] = useState([]); // Store cart items
@@ -51,24 +52,34 @@ function App() {
             element={
               <>
                 <Hero />
-                <hr />
+                {/* <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" /> */}
+                <br />
+                <br />
                 <Products />
                 <br />
-                <hr />
+                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
                 <Banner />
-                <hr />
+                <br />
+                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
+                <br />
                 <br />
                 <br />
                 <TopProducts addToCart={addToCart}  />
+                <br />              
+                <br />              
+                <br />
+                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
+                <br />              
+                <br />              
+                <Subscribe /> 
+                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
+                <br />               
+                <br />               
+                <br />               
+                <Testimonials /> 
                 <br />
                 <br />
-                <br />
-                <hr />
-                <Subscribe />
-                <hr />
-                <br />
-                <Testimonials />
-                <hr />
+                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />            
               </>
             }
           />
@@ -81,7 +92,8 @@ function App() {
         </Routes>
 
         <Footer />
-        {/* <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} /> */}
+        <br />
+        <br />
       </div>
     </Router>
   );
