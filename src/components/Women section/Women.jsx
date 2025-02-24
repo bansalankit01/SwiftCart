@@ -236,6 +236,7 @@ const Women = ({ addToCart }) => {
    const [searchQuery, setSearchQuery] = useState("");
     const [category, setCategory] = useState("All");
     const [sortOrder, setSortOrder] = useState(""); // "asc" or "desc"
+    const [loading, setLoading] = useState(null);
   
     // Filter & Search Logic
     const filteredProducts = ProductsData.filter((product) => {
@@ -251,6 +252,14 @@ const Women = ({ addToCart }) => {
       if (sortOrder === "desc") return b.price - a.price;
       return 0;
     });
+
+    const handleAddToCart = (product) => {
+      setLoading(product.id);
+      setTimeout(() => {
+        addToCart(product);
+        setLoading(null);
+      }, 500);
+    };
 
     return (
       <div className="container mb-20">
@@ -271,7 +280,7 @@ const Women = ({ addToCart }) => {
           />
   
           {/* Category Filter */}
-          <select value={category} onChange={(e) => setCategory(e.target.value)} className="border p-2 rounded-md dark:bg-slate-800 w-[255px]">
+          <select value={category} onChange={(e) => setCategory(e.target.value)} className="border p-2 rounded-md dark:bg-slate-800 md:w-[255px] w-full">
             <option value="All">All Categories</option>
             <option value="Saree">Saree</option>
             <option value="Watches">Watches</option>
@@ -286,7 +295,7 @@ const Women = ({ addToCart }) => {
           </select>
   
           {/* Sorting Dropdown */}
-          <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)} className="border p-2 rounded-md dark:bg-slate-800">
+          <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)} className="border p-2 rounded-md dark:bg-slate-800 md:w-[255px] w-full">
             <option value="">Sort By</option>
             <option value="asc">Price: Low to High</option>
             <option value="desc">Price: High to Low</option>
@@ -294,26 +303,37 @@ const Women = ({ addToCart }) => {
         </div>
   
         {/* Product List */}
-        <div data-aos="fade-up" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 place-items-center">
-          {sortedProducts.length > 0 ? (
-            sortedProducts.map((product) => (
-              <div key={product.id} className="rounded-2xl text-center bg-white dark:bg-gray-800 shadow-xl duration-300 group w-full sm:w-[200px] md:w-[250px] h-[350px] flex flex-col justify-between">
-                <div className="h-[150px] flex items-center justify-center">
-                  <img src={product.img} alt={product.title} className="max-w-[140px] mt-16 md:max-w-[150px] object-contain block mx-auto transform duration-300 drop-shadow-md" />
-                </div>
-                <div className="p-4 flex flex-col justify-between flex-grow">
-                  <h1 className="text-sm font-bold line-clamp-2 mt-11">{product.title}</h1>
-                  <p className="text-red-500 font-bold group-hover:text-red-500 duration-300 text-sm mt-4">₹{product.price}</p>
-                  <button className="bg-primary hover:scale-105 duration-300 text-white py-1 rounded-md mt-auto hover:bg-sky-800 dark:group-hover:bg-white dark:group-hover:text-primary" onClick={() => addToCart(product)}>
-                    Add to cart
-                  </button>
-                </div>
+        
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 place-items-center">
+        {sortedProducts.length > 0 ? (
+          sortedProducts.map((product) => (
+            <div key={product.id} className="relative rounded-3xl bg-white dark:bg-gray-900 shadow-2xl p-6 flex flex-col items-center transform transition-all duration-500 w-full max-w-[280px] backdrop-blur-lg border border-gray-300 dark:border-gray-700 hover:shadow-3xl hover:-translate-y-2 hover:scale-105 hover:border-indigo-600 hover:ring-2 hover:ring-indigo-400">
+              <div className="h-44 flex items-center justify-center overflow-hidden rounded-xl">
+                <img
+                  src={product.img}
+                  alt={product.title}
+                  className="max-h-40 object-contain drop-shadow-lg transition-all duration-500 hover:scale-110 hover:rotate-2"
+                />
               </div>
-            ))
-          ) : (
-            <p className="text-gray-500">No products found.</p>
-          )}
-        </div>
+              <div className="text-center w-full mt-5">
+                <h1 className="text-lg font-semibold text-gray-900 dark:text-white leading-tight line-clamp-2">
+                  {product.title}
+                </h1>
+                <p className="text-red-500 font-extrabold mt-3 text-lg">₹{product.price}</p>
+                <button
+                  className="mt-5 w-full py-3 px-6 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white flex items-center justify-center gap-2 transition-all duration-500 shadow-lg hover:shadow-xl dark:hover:bg-gray-800 dark:hover:text-white relative overflow-hidden before:absolute before:w-full before:h-full before:bg-white/20 before:top-0 before:left-0 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500"
+                  onClick={() => handleAddToCart(product)}
+                  disabled={loading === product.id}
+                >
+                  {loading === product.id ? "Adding..." : "Add to Cart"}
+                </button>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p className="text-gray-500">No products found.</p>
+        )}
+      </div>
       </div>
     );
 };

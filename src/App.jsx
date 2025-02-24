@@ -17,7 +17,8 @@ import Women from "./components/Women section/Women";
 import Kids from "./components/Kids section/Kids";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import { motion } from "framer-motion";
+import UniqueSection from "./components/Uniquesection/UniqueSection";
+// import { motion } from "framer-motion";
 
 function App() {
   const [cartItems, setCartItems] = useState([]); // Store cart items
@@ -62,8 +63,6 @@ function App() {
                 <br />
                 <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
                 <br />
-                <br />
-                <br />
                 <TopProducts addToCart={addToCart}  />
                 <br />              
                 <br />              
@@ -71,7 +70,8 @@ function App() {
                 <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
                 <br />              
                 <br />              
-                <Subscribe /> 
+                {/* <Subscribe />  */}
+              <UniqueSection  />
                 <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
                 <br />               
                 <br />               

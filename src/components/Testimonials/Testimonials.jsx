@@ -74,9 +74,9 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="py-20 md:w-[94.5%] mx-10 rounded-3xl bg-gradient-to-r from-blue-100 via-purple-200 to-pink-200 dark:from-gray-500 dark:via-purple-300 dark:to-blue-300">
+    <div className="py-20 md:w-[95%] w-[90%] md:mx-10 mx-6 rounded-3xl bg-gradient-to-r from-blue-100 via-purple-200 to-pink-200 dark:from-gray-500 dark:via-purple-300 dark:to-blue-300">
       <div className="container mx-auto mt-[-20px]">
-        <div className="text-center mb-12">
+        <div data-aos="zoom-in" className="text-center mb-12">
           <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="md:text-4xl text-2xl font-extrabold text-gray-900 dark:text-black">
             𝑾𝒉𝒂𝒕 𝒐𝒖𝒓 𝒄𝒖𝒔𝒕𝒐𝒎𝒆𝒓𝒔 𝒂𝒓𝒆 𝒔𝒂𝒚𝒊𝒏𝒈 💬
           </motion.h1>
@@ -89,7 +89,7 @@ const Testimonials = () => {
           <Slider {...settings}>
             {TestimonialData.map((data) => (
               <motion.div key={data.id} className="px-4 flex justify-center">
-                <div className="w-full max-w-xs min-h-[380px] flex flex-col justify-between p-6 bg-white dark:bg-gray-300 shadow-xl rounded-2xl items-center text-center transition-transform duration-500">
+                <div data-aos="zoom-in" className="w-full max-w-xs min-h-[380px] flex flex-col justify-between p-6 bg-white dark:bg-gray-300 shadow-xl rounded-2xl items-center text-center transition-transform duration-500">
                   <motion.img src={data.img} alt={data.name} className="rounded-full w-16 h-16 border-4 border-blue-500 shadow-md" />
                   <h2 className="mt-3 text-lg font-semibold text-gray-900">{data.name}</h2>
                   <p className="text-sm text-gray-500">{data.location}</p>

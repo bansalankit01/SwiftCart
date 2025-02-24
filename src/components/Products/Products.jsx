@@ -191,10 +191,10 @@ const Products = () => {
   }, []);
 
   return (
-    <div data-aos="fade-up" id="trendingdeal" className="mt-10 mb-12 overflow-hidden">
+    <div  id="trendingdeal" className="mt-10 mb-12 overflow-hidden">
       <div className="container mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-20 max-w-[600px] mx-auto">
+        <div data-aos="fade-up" className="text-center mb-20 max-w-[600px] mx-auto">
           <h1 className="md:text-4xl text-2xl font-bold text-gray-900 dark:text-white">
             🛍️ 𝑻𝒓𝒆𝒏𝒅𝒊𝒏𝒈 𝑫𝒆𝒂𝒍𝒔 & 𝑶𝒇𝒇𝒆𝒓 🛍️
           </h1>
@@ -204,7 +204,7 @@ const Products = () => {
         </div>
 
         {/* Scrolling Container */}
-        <div
+        <div data-aos="fade-up"
           ref={scrollRef}
           className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-none whitespace-nowrap"
         >

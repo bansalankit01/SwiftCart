@@ -19,8 +19,8 @@ import companyname from "../../assets/website/companyname.png";
 
 const Footer = () => {
   return (
-    <div className="md:mx-10 mx-10 mt-12 rounded-3xl text-white bg-pink-300/20 dark:bg-rose-100/20 bg-opacity-30 backdrop-blur-lg border border-white/20 dark:border-white/30">
-      <div className="container md:h-[300px] ">
+    <div className="md:mx-10 mx-6 mt-12 rounded-3xl text-white bg-pink-300/20 dark:bg-rose-100/20 bg-opacity-30 backdrop-blur-lg border border-white/20 dark:border-white/30 md:w-[95%] w-[90%]">
+      <div className="container md:h-[350px] ">
         <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-10 pt-8">
           {/* Company Details */}
           <div className="py-8 px-4 md:mt-2">
@@ -126,8 +126,8 @@ const Footer = () => {
       </div>
       <hr className=" w-[92%]  mx-auto border-gray-300 dark:border-gray-600 my-3" />
       <div className="md:h-[50px] h-[60px]">
-        <div className="md:mt-2 mt-5 mx-6 md:mx-[400px] md:text-xl text-sm text-gray-900 dark:text-gray-400">
-          © 𝒄𝒐𝒑𝒚𝒓𝒊𝒈𝒉𝒕 @ 2025 𝒃𝒚 <span className="text-sky-600"> 𝑴𝒓. 𝑨𝒏𝒌𝒊𝒕 𝑩𝒂𝒏𝒔𝒂𝒍</span> | 𝒂𝒍𝒍 𝒓𝒊𝒈𝒉𝒕 𝒓𝒆𝒔𝒆𝒓𝒗𝒆𝒅!
+        <div className="md:mt-2 mt-5 mx-4 md:mx-[400px] md:text-xl text-sm text-gray-900 dark:text-gray-400">
+          © 𝒄𝒐𝒑𝒚𝒓𝒊𝒈𝒉𝒕 @ 2025 𝒃𝒚 <span className="text-sky-600"> 𝑴𝒓. 𝑨𝒏𝒌𝒊𝒕 𝑩𝒂𝒏𝒔𝒂𝒍</span> | 𝒂𝒍𝒍 𝒓𝒊𝒈𝒉𝒕 <span className="md:mx-1 mx-36 ">𝒓𝒆𝒔𝒆𝒓𝒗𝒆𝒅!</span>
         </div>
       </div>
     </div>
