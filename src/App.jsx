@@ -18,6 +18,7 @@ import Kids from "./components/Kids section/Kids";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import UniqueSection from "./components/Uniquesection/UniqueSection";
+import Styleinspiration from "./components/Style Inspiration/Styleinspiration";
 // import { motion } from "framer-motion";
 
 function App() {
@@ -89,6 +90,8 @@ function App() {
           <Route path="/cart" element={<Cart cartItems={cartItems} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/styleinspiration" element={<Styleinspiration addToCart={addToCart} />} />
+          
         </Routes>
 
         <Footer />

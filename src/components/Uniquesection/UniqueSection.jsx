@@ -1,6 +1,7 @@
 // import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const UniqueSections = () => {
   const colorStyles = {
@@ -14,10 +15,19 @@ const UniqueSections = () => {
       {/* Style Inspirations Section */}
 
       <section>
-        <h2 data-aos="fade-up" className="md:text-4xl text-3xl mt-[-20px] mb-20 md:mt-[-26px] md:mb-16">𝑺𝒕𝒚𝒍𝒆 𝑰𝒏𝒔𝒑𝒊𝒓𝒂𝒕𝒊𝒐𝒏𝒔 ✨</h2>
-        <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {/* Casual Chic */}
-          <div className="p-4 shadow-lg rounded-2xl bg-white">
+        <h2
+          data-aos="fade-up"
+          className="md:text-4xl text-3xl mt-[-20px] mb-20 md:mt-[-26px] md:mb-16"
+        >
+          𝑺𝒕𝒚𝒍𝒆 𝑰𝒏𝒔𝒑𝒊𝒓𝒂𝒕𝒊𝒐𝒏𝒔 ✨
+        </h2>
+        <div
+          data-aos="fade-up"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          {/* Casual wear */}
+
+          <div className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-700">
             <img
               src="https://img.freepik.com/free-photo/purchase-sale-discount-fashion-style_53876-15282.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
               alt="Casual Wear"
@@ -26,13 +36,15 @@ const UniqueSections = () => {
             <h3 className="text-xl font-semibold text-center mt-3">
               Casual Wear
             </h3>
-            <button className="mt-2 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
-              Shop the Look
+            <Link to="/styleinspiration" id="casualwear">
+            <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
+              Shop Now
             </button>
+            </Link>
           </div>
 
           {/* Streetwear */}
-          <div className="p-4 shadow-lg rounded-2xl bg-white">
+          <div className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-700">
             <img
               src="https://img.freepik.com/free-photo/freedom-enjoyment-good-vibes-independence_53876-21341.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
               alt="Streetwear"
@@ -41,13 +53,15 @@ const UniqueSections = () => {
             <h3 className="text-xl font-semibold text-center mt-3">
               Street Wear
             </h3>
-            <button className="mt-2 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+            <Link to="/styleinspiration" id="casualwear">
+            <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
               Shop Now
             </button>
+            </Link>
           </div>
 
           {/* Denim Edge */}
-          <div className="p-4 shadow-lg rounded-2xl bg-white">
+          <div className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-700">
             <img
               src="https://img.freepik.com/free-photo/travel-accessory-concept_1388-37.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
               alt="Denim Edge"
@@ -56,13 +70,15 @@ const UniqueSections = () => {
             <h3 className="text-xl font-semibold text-center mt-3">
               Denim Edge
             </h3>
-            <button className="mt-2 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+            <Link to="/styleinspiration" id="casualwear">
+            <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
               Shop Now
             </button>
+            </Link>
           </div>
 
           {/* Athleisure */}
-          <div className="p-4 shadow-lg rounded-2xl bg-white">
+          <div className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-700">
             <img
               src="https://img.freepik.com/free-photo/training-supplies-near-tablet-with-picture_23-2147750794.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
               alt="Athleisure"
@@ -71,9 +87,11 @@ const UniqueSections = () => {
             <h3 className="text-xl font-semibold text-center mt-3">
               Athleisure
             </h3>
-            <button className="mt-2 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+            <Link to="/styleinspiration" id="casualwear">
+            <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
               Shop Now
             </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -81,75 +99,65 @@ const UniqueSections = () => {
       {/* Shop the Look Section */}
 
       <section>
-        <h2 className="md:text-4xl text-3xl mt-[-20px] mb-20 md:mt-[16px] md:mb-16">𝑺𝒉𝒐𝒑 𝒕𝒉𝒆 𝑳𝒐𝒐𝒌 🛍️</h2>
+        <h2 className="md:text-4xl text-3xl mt-[-20px] mb-20 md:mt-[16px] md:mb-16">
+          𝑺𝒉𝒐𝒑 𝒕𝒉𝒆 𝑳𝒐𝒐𝒌 🛍️
+        </h2>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {/* Summer Vibes */}
-          <div className="p-4 shadow-lg rounded-2xl bg-white">
-            <img
-              src="https://img.freepik.com/free-vector/flat-frame-template-summertime-season_23-2150320861.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
-              alt="Summer Vibes"
-              className="rounded-lg w-full h-49 object-cover"
-            />
-            <h3 className="text-xl font-semibold text-center mt-3 mb-3">
-              Summer Vibes
-            </h3>
-            <button className="mt-2 w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">
-              Shop Now
-            </button>
-          </div>
+          {[
+            {
+              img: "https://img.freepik.com/free-vector/flat-frame-template-summertime-season_23-2150320861.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid",
+              title: "Summer Vibes",
+            },
+            {
+              img: "https://img.freepik.com/free-vector/creative-winter-social-media-post_23-2148792919.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid",
+              title: "Winter Cozy",
+            },
+            {
+              img: "https://img.freepik.com/free-vector/autumn-minimalist-background_23-2147497314.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid",
+              title: "Autumn Elegance",
+            },
+            {
+              img: "https://img.freepik.com/free-vector/monsoon-sale-background_23-2147649836.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid",
+              title: "Monsoon Magic",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-500 flex flex-col h-full"
+            >
+              <img
+                src={item.img}
+                alt={item.title}
+                className="rounded-lg w-full h-52 object-cover"
+              />
 
-          {/* Winter Cozy */}
-          <div className="p-4 shadow-lg rounded-2xl bg-white">
-            <img
-              src="https://img.freepik.com/free-vector/creative-winter-social-media-post_23-2148792919.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
-              alt="Winter Cozy"
-              className="rounded-lg w-full h-49 object-cover"
-            />
-            <h3 className="text-xl font-semibold text-center mt-3 mb-3">
-              Winter Cozy
-            </h3>
-            <button className="mt-2 w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">
-              Shop Now
-            </button>
-          </div>
+              {/* Content Wrapper for Title & Button */}
+              <div className="flex flex-col flex-grow justify-between w-full text-center">
+                <h3 className="text-xl font-semibold mt-3 mb-3">
+                  {item.title}
+                </h3>
 
-          {/* Autumn Elegance (New Addition) */}
-          <div className="p-4 shadow-lg rounded-2xl bg-white">
-            <img
-              src="https://img.freepik.com/free-vector/autumn-minimalist-background_23-2147497314.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
-              alt="Autumn Elegance"
-              className="rounded-lg w-full h-49 object-cover"
-            />
-            <h3 className="text-xl font-semibold text-center mt-3 mb-3">
-              Autumn Elegance
-            </h3>
-            <button className="mt-2 w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">
-              Shop Now
-            </button>
-          </div>
-
-          {/* Monsoon Magic */}
-          <div className="p-4 shadow-lg rounded-2xl bg-white">
-            <img
-              src="https://img.freepik.com/free-vector/monsoon-sale-background_23-2147649836.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
-              alt="Monsoon Magic"
-              className="rounded-lg w-full h-49 object-cover"
-            />
-            <h3 className="text-xl font-semibold text-center mt-3 mb-3">
-              Monsoon Magic
-            </h3>
-            <button className="mt-2 w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">
-              Shop Now
-            </button>
-          </div>
+                {/* Button stays at the bottom */}
+                <button className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-teal-600 hover:to-green-500 text-white py-3 px-6 rounded-lg mt-5 w-full dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
+                  Explore
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Limited Edition Drops Section */}
 
       <section>
-        <h2 data-aos="fade-up" className="text-2xl font-bold md:mt-16 mb-4">𝑳𝒊𝒎𝒊𝒕𝒆𝒅 𝑬𝒅𝒊𝒕𝒊𝒐𝒏 𝑫𝒓𝒐𝒑𝒔 ⏳</h2>
-        <div data-aos="fade-up" className="flex flex-col md:flex-row items-center gap-6">
+        <h2 data-aos="fade-up" className="text-2xl font-bold md:mt-16 mb-4">
+          𝑳𝒊𝒎𝒊𝒕𝒆𝒅 𝑬𝒅𝒊𝒕𝒊𝒐𝒏 𝑫𝒓𝒐𝒑𝒔 ⏳
+        </h2>
+        <div
+          data-aos="fade-up"
+          className="flex flex-col md:flex-row items-center gap-6"
+        >
           <CountdownCircleTimer
             isPlaying
             duration={86400}
@@ -172,213 +180,109 @@ const UniqueSections = () => {
         </div>
       </section>
 
-      {/* Celebrity & Influencer Picks Section */}
+      {/* Celebrity Picks Section */}
 
       <section>
-        <h2 data-aos="fade-up" className="md:text-4xl text-3xl mt-[-20px] mb-20 md:mt-[26px] md:mb-16">
-           𝑪𝒆𝒍𝒆𝒃𝒓𝒊𝒕𝒚 & 𝑰𝒏𝒇𝒍𝒖𝒆𝒏𝒄𝒆𝒓 𝑪𝒍𝒐𝒔𝒆𝒕🌟
+        <h2
+          data-aos="fade-up"
+          className="md:text-4xl text-3xl mt-[-20px] mb-20 md:mt-[26px] md:mb-16"
+        >
+          𝑪𝒆𝒍𝒆𝒃𝒓𝒊𝒕𝒚 𝑪𝒍𝒐𝒔𝒆𝒕🌟
         </h2>
 
-        {/* men */}
-        <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-6 gap-6">
-          
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/files/TUX2502_533x.jpg?v=1708334949"
-              alt="Shahid Kapoor In Orion Nebula Tuxedo"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Shahid Kapoor In Orion Nebula Tuxedo</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 195,000</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
+        {/* Men & Women */}
+        <div
+          data-aos="fade-up"
+          className="grid grid-cols-2 md:grid-cols-6 md:gap-6 gap-4"
+        >
+          {/* Men Section */}
+          {[
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/files/TUX2502_533x.jpg?v=1708334949",
+              title: "Shahid Kapoor In Orion Nebula Tuxedo",
+              price: "Rs 195,000",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/files/MKPSL1332_533x.jpg?v=1726483545",
+              title: "Ahan Shetty In Embellished Black Kurta",
+              price: "Rs 44,500",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/files/RR1586K_533x.jpg?v=1695905187",
+              title: "Vicky Kaushal In Chikankari Short Kurta",
+              price: "Rs 24,500",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/products/1_ef3e8f34-e441-4063-996c-0c9bb09703d2_533x.jpg?v=1669881787",
+              title: "Ranveer Singh In Wildflower Embellished Tuxedo",
+              price: "Rs 145,000",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/files/MSH4751_2_fef4033c-dba0-4032-9b7d-fe88e244ab8e_533x.jpg?v=1729324607",
+              title: "Jasprit Bumrah In Pyrrhus Sherwani Set",
+              price: "Rs 345,000",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/products/IshaanKhatterwearingRohitGandhi_RahulKhanna_2_533x.png?v=1673603061",
+              title: "Ishaan Khattar In Supernova Tuxedo",
+              price: "Rs 115,000",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/files/GW6166_f1218f8d-7707-43a7-bd6c-ebcba42a0474_533x.jpg?v=1729324489",
+              title: "Ananya Panday In Mist Crossover Panels Gown",
+              price: "Rs 395,000",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/files/GW6100_349de73e-cd10-4c72-9678-8c7742c31fc1_533x.jpg?v=1729324524",
+              title: "Dia Mirza In Starry Glitch Gown",
+              price: "Rs 195,000",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/files/JKT14003_533x.jpg?v=1683551150",
+              title: "Sanjana Sanghi In Galactic Black Paneled Jacket",
+              price: "Rs 64,500",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/files/GW6122_2_533x.jpg?v=1688393612",
+              title: "Amy Jackson In Venus Embellished Gown",
+              price: "Rs 185,000",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/products/DishaF4_533x.jpg?v=1671541024",
+              title: "Disha Patani In Axio Jumpsuit",
+              price: "Rs 225,000",
+            },
+            {
+              img: "https://cdn.shopify.com/s/files/1/0565/1169/2936/products/TamannaahBhatiawearingRohitGandhi_RahulKhannaandVandals_2_533x.jpg?v=1671529585",
+              title: "Tamannaah Bhatia In Twilight Jacket Set",
+              price: "Rs 93,000",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-800 flex flex-col items-center h-full"
+              whileHover={{ scale: 1.05 }}
+            >
+              <img
+                src={item.img}
+                alt={item.title}
+                className="rounded-lg w-full h-64 object-cover"
+              />
 
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/files/MKPSL1332_533x.jpg?v=1726483545"
-              alt="Ahan Shetty In Embellished Black Kurta"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Ahan Shetty In Embellished Black Kurta</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 44,500</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
+              {/* Content Wrapper */}
+              <div className="flex flex-col flex-grow justify-between w-full text-center">
+                <h3 className="text-md font-semibold mt-3">{item.title}</h3>
+                <p className="text-red-500 font-extrabold mt-3 text-lg">
+                  {item.price}
+                </p>
 
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/files/RR1586K_533x.jpg?v=1695905187"
-              alt="Vicky Kaushal In Chikankari Short Kurta"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Vicky Kaushal In Chikankari Short Kurta</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 24,500</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/products/1_ef3e8f34-e441-4063-996c-0c9bb09703d2_533x.jpg?v=1669881787"
-              alt="Ranveer Singh In Wildflower Embellished Tuxedo"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-sm font-semibold mt-3">Ranveer Singh In Wildflower Embellished Tuxedo</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 145,000</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/files/MSH4751_2_fef4033c-dba0-4032-9b7d-fe88e244ab8e_533x.jpg?v=1729324607"
-              alt="Jasprit Bumrah In Pyrrhus Sherwani Set"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Jasprit Bumrah In Pyrrhus Sherwani Set</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 345,000</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/products/IshaanKhatterwearingRohitGandhi_RahulKhanna_2_533x.png?v=1673603061"
-              alt="Ishaan Khattar In Supernova Tuxedo"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Ishaan Khattar In Supernova Tuxedo</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 115,000</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
-        </div>
-        <br />
-        {/* women */}
-        <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-6 gap-6">
-          
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/files/GW6166_f1218f8d-7707-43a7-bd6c-ebcba42a0474_533x.jpg?v=1729324489"
-              alt="Ananya Panday In Mist Crossover Panels Gown"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Ananya Panday In Mist Crossover Panels Gown</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 395,000</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/files/GW6100_349de73e-cd10-4c72-9678-8c7742c31fc1_533x.jpg?v=1729324524"
-              alt="Dia Mirza In Starry Glitch Gown"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Dia Mirza In Starry Glitch Gown</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 195,000</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/files/JKT14003_533x.jpg?v=1683551150"
-              alt="Sanjana Sanghi In Galactic Black Paneled Jacket"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Sanjana Sanghi In Galactic Black Paneled Jacket</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 64,500</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/files/GW6122_2_533x.jpg?v=1688393612"
-              alt="Amy Jackson In Venus Embellished Gown"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-sm font-semibold mt-3">Amy Jackson In Venus Embellished Gown</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 185,000</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/products/DishaF4_533x.jpg?v=1671541024"
-              alt="Disha Patani In Axio Jumpsuit"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Disha Patani In Axio Jumpsuit</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 225,000</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
-          <motion.div
-            className="p-4 shadow-lg rounded-2xl bg-white"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img
-              src="https://cdn.shopify.com/s/files/1/0565/1169/2936/products/TamannaahBhatiawearingRohitGandhi_RahulKhannaandVandals_2_533x.jpg?v=1671529585"
-              alt="Tamannaah Bhatia In Twilight Jacket Set"
-              className="rounded-lg w-full h-58 object-cover"
-            />
-            <h3 className="text-md font-semibold mt-3">Tamannaah Bhatia In Twilight Jacket Set</h3>
-            <p className="text-red-500 font-extrabold mt-3 text-lg">Rs 93,000</p>
-            <button className="mt-2 w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
-              Quick Buy
-            </button>
-          </motion.div>
-
+                {/* Button Aligned at Bottom */}
+                <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
+                  Quick Buy
+                </button>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
@@ -390,7 +294,7 @@ const UniqueSections = () => {
           {Object.entries(colorStyles).map(([colorName, colorHex], index) => (
             <div
               key={index}
-              className="p-4 shadow-lg rounded-2xl bg-white text-center"
+              className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-800 text-center"
             >
               <div
                 className="h-20 w-20 rounded-full border border-gray-300 mx-auto"
