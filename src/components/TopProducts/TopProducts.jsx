@@ -77,7 +77,7 @@ const TopProducts = ({ addToCart }) => {
               </div>
               <p className="text-red-500 font-extrabold mt-3 text-lg">{product.price}</p>
               <button
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3  rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg"
                 onClick={() => handleAddToCart(product)}
                 disabled={loading === product.id}
               >
