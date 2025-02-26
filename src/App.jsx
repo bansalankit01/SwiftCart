@@ -79,7 +79,7 @@ function App() {
                 <br />              
                 <br />              
                 {/* <Subscribe />  */}
-              <UniqueSection  />
+              <UniqueSection addToCart={addToCart} />
                 <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
                 <br />               
                 <br />               
