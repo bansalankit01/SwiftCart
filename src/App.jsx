@@ -18,7 +18,14 @@ import Kids from "./components/Kids section/Kids";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import UniqueSection from "./components/Uniquesection/UniqueSection";
-import Styleinspiration from "./components/Style Inspiration/Styleinspiration";
+import Casualwear from "./components/Style Inspiration/Casualwear";
+import Streetwear from "./components/Style Inspiration/Streetwear";
+import Denimedge from "./components/Style Inspiration/Denimedge";
+import Athleisure from "./components/Style Inspiration/Athleisure";
+import Summervibes from "./components/Shop The Look/Summervibes";
+import Wintercozy from "./components/Shop The Look/Wintercozy";
+import Autumnelegance from "./components/Shop The Look/Autumnelegance";
+import Monsoonmagic from "./components/Shop The Look/Monsoonmagic";
 // import { motion } from "framer-motion";
 
 function App() {
@@ -90,7 +97,14 @@ function App() {
           <Route path="/cart" element={<Cart cartItems={cartItems} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/styleinspiration" element={<Styleinspiration addToCart={addToCart} />} />
+          <Route path="/casualwear" element={<Casualwear addToCart={addToCart} />} />
+          <Route path="/streetwear" element={<Streetwear addToCart={addToCart} />} />
+          <Route path="/denimedge" element={<Denimedge addToCart={addToCart} />} />
+          <Route path="/athleisure" element={<Athleisure addToCart={addToCart} />} />
+          <Route path="/Summervibes" element={<Summervibes addToCart={addToCart} />} />
+          <Route path="/Wintercozy" element={<Wintercozy addToCart={addToCart} />} />
+          <Route path="/Autumnelegance" element={<Autumnelegance addToCart={addToCart} />} />
+          <Route path="/Monsoonmagic" element={<Monsoonmagic addToCart={addToCart} />} />
           
         </Routes>
 

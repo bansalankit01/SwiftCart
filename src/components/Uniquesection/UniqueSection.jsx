@@ -36,7 +36,7 @@ const UniqueSections = () => {
             <h3 className="text-xl font-semibold text-center mt-3">
               Casual Wear
             </h3>
-            <Link to="/styleinspiration" id="casualwear">
+            <Link to="/casualwear">
             <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
               Shop Now
             </button>
@@ -53,7 +53,7 @@ const UniqueSections = () => {
             <h3 className="text-xl font-semibold text-center mt-3">
               Street Wear
             </h3>
-            <Link to="/styleinspiration" id="casualwear">
+            <Link to="/streetwear">
             <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
               Shop Now
             </button>
@@ -70,7 +70,7 @@ const UniqueSections = () => {
             <h3 className="text-xl font-semibold text-center mt-3">
               Denim Edge
             </h3>
-            <Link to="/styleinspiration" id="casualwear">
+            <Link to="/denimedge">
             <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
               Shop Now
             </button>
@@ -87,7 +87,7 @@ const UniqueSections = () => {
             <h3 className="text-xl font-semibold text-center mt-3">
               Athleisure
             </h3>
-            <Link to="/styleinspiration" id="casualwear">
+            <Link to="/athleisure" id="casualwear">
             <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
               Shop Now
             </button>
@@ -102,49 +102,74 @@ const UniqueSections = () => {
         <h2 className="md:text-4xl text-3xl mt-[-20px] mb-20 md:mt-[16px] md:mb-16">
           𝑺𝒉𝒐𝒑 𝒕𝒉𝒆 𝑳𝒐𝒐𝒌 🛍️
         </h2>
-
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            {
-              img: "https://img.freepik.com/free-vector/flat-frame-template-summertime-season_23-2150320861.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid",
-              title: "Summer Vibes",
-            },
-            {
-              img: "https://img.freepik.com/free-vector/creative-winter-social-media-post_23-2148792919.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid",
-              title: "Winter Cozy",
-            },
-            {
-              img: "https://img.freepik.com/free-vector/autumn-minimalist-background_23-2147497314.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid",
-              title: "Autumn Elegance",
-            },
-            {
-              img: "https://img.freepik.com/free-vector/monsoon-sale-background_23-2147649836.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid",
-              title: "Monsoon Magic",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-500 flex flex-col h-full"
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="rounded-lg w-full h-52 object-cover"
-              />
+          {/* Summer Vibes */}
+          <div className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-500">
+            <img
+              src="https://img.freepik.com/free-vector/flat-frame-template-summertime-season_23-2150320861.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
+              alt="Summer Vibes"
+              className="rounded-lg w-full h-49 object-cover"
+            />
+            <h3 className="text-xl font-semibold text-center mt-3 mb-3">
+              Summer Vibes
+            </h3>
+            <Link to="/Summervibes">
+            <button className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-teal-600 hover:to-green-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
+              Explore
+            </button>
+            </Link>
+          </div>
 
-              {/* Content Wrapper for Title & Button */}
-              <div className="flex flex-col flex-grow justify-between w-full text-center">
-                <h3 className="text-xl font-semibold mt-3 mb-3">
-                  {item.title}
-                </h3>
+          {/* Winter Cozy */}
+          <div className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-500">
+            <img
+              src="https://img.freepik.com/free-vector/creative-winter-social-media-post_23-2148792919.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
+              alt="Winter Cozy"
+              className="rounded-lg w-full h-49 object-cover"
+            />
+            <h3 className="text-xl font-semibold text-center mt-3 mb-3">
+              Winter Cozy
+            </h3>
+            <Link to="/Wintercozy">
+            <button className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-teal-600 hover:to-green-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
+              Explore
+            </button>
+            </Link>
+          </div>
 
-                {/* Button stays at the bottom */}
-                <button className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-teal-600 hover:to-green-500 text-white py-3 px-6 rounded-lg mt-5 w-full dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
-                  Explore
-                </button>
-              </div>
-            </div>
-          ))}
+          {/* Autumn Elegance (New Addition) */}
+          <div className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-500">
+            <img
+              src="https://img.freepik.com/free-vector/autumn-minimalist-background_23-2147497314.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
+              alt="Autumn Elegance"
+              className="rounded-lg w-full h-49 object-cover"
+            />
+            <h3 className="text-xl font-semibold text-center mt-3 mb-3">
+              Autumn Elegance
+            </h3>
+            <Link to="/Autumnelegance">
+            <button className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-teal-600 hover:to-green-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
+              Explore
+            </button>
+            </Link>
+          </div>
+
+          {/* Monsoon Magic */}
+          <div className="p-4 shadow-lg rounded-2xl bg-white dark:bg-gray-500">
+            <img
+              src="https://img.freepik.com/free-vector/monsoon-sale-background_23-2147649836.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid"
+              alt="Monsoon Magic"
+              className="rounded-lg w-full h-49 object-cover"
+            />
+            <h3 className="text-xl font-semibold text-center mt-3 mb-3">
+              Monsoon Magic
+            </h3>
+            <Link to="/Monsoonmagic">
+            <button className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-teal-600 hover:to-green-500 text-white py-3 px-6 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg">
+              Explore
+            </button>
+            </Link>
+          </div>
         </div>
       </section>
 
