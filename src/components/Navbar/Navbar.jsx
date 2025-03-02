@@ -120,12 +120,12 @@ const Navbar = ({ cartItems }) => {
                 <div className="absolute right-0 mt-3 w-[200px] rounded-md bg-white p-3 text-black shadow-xl border border-gray-300 z-[9999]">
                   <div className="flex flex-col items-center gap-2">
                     <Link to="/login">
-                      <button className="border border-black dark:border-black px-4 py-2 rounded w-[180px] hover:bg-gray-100">
+                      <button className="border border-black dark:border-black px-4 py-2 rounded w-[180px] hover:bg-gray-300">
                         Login
                       </button>
                     </Link>
                     <Link to="/signup">
-                      <button className="border border-black dark:border-black px-4 py-2 rounded w-[180px] hover:bg-gray-100">
+                      <button className="border border-black dark:border-black px-4 py-2 rounded w-[180px] hover:bg-gray-300">
                         SignUp
                       </button>
                     </Link>
@@ -185,6 +185,7 @@ const Navbar = ({ cartItems }) => {
         </div>
       </div>
 
+{/* Mobile view  */}
       <div
         className={`sm:hidden ${
           menuOpen ? "block" : "hidden"
