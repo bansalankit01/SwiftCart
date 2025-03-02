@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
-import { RxHamburgerMenu } from "react-icons/rx"; // Menu icon
+import { RxHamburgerMenu } from "react-icons/rx";
 import DarkMode from "./DarkMode";
 import companyname from "../../assets/website/companyname.png";
+import { FaUserCircle } from "react-icons/fa";
 
 const Menu = [
   { id: 1, name: "Home", link: "/" },
@@ -22,9 +23,12 @@ const DropdownLinks = [
 const Navbar = ({ cartItems }) => {
   const cartItemCount = cartItems.length;
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Scroll to section on click
   const handleNavigateAndScroll = (sectionId) => {
     if (location.pathname !== "/") {
       navigate("/");
@@ -44,12 +48,24 @@ const Navbar = ({ cartItems }) => {
     }
   };
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className="z-40 sticky top-0">
       {/* ===== Upper Navbar ===== */}
-
-      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-500/20 dark:bg-rose-200/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm">
-        <div className="container flex justify-between items-center py-4">
+      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-500/20 dark:bg-rose-200/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm relative z-[1000]">
+        <div className="container flex justify-between items-center py-4 relative">
           {/* Logo */}
           <Link to="/" className="font-bold text-xl items-center h-6 flex">
             <img
@@ -91,14 +107,31 @@ const Navbar = ({ cartItems }) => {
             {/* Dark Mode */}
             <DarkMode />
 
-            {/* Login / Signup (Hidden on Mobile) */}
-            <div className="hidden md:flex gap-2">
-              <button className="border border-black dark:border-white px-4 py-1 rounded">
-                Login
+            {/* Login / Signup (Fixed Dropdown Issue) */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                className="flex items-center text-3xl py-2"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <FaUserCircle />
               </button>
-              <button className="border border-black dark:border-white px-4 py-1 rounded">
-                SignUp
-              </button>
+
+              {isOpen && (
+                <div className="absolute right-0 mt-3 w-[200px] rounded-md bg-white p-3 text-black shadow-xl border border-gray-300 z-[9999]">
+                  <div className="flex flex-col items-center gap-2">
+                    <Link to="/login">
+                      <button className="border border-black dark:border-black px-4 py-2 rounded w-[180px] hover:bg-gray-100">
+                        Login
+                      </button>
+                    </Link>
+                    <Link to="/signup">
+                      <button className="border border-black dark:border-black px-4 py-2 rounded w-[180px] hover:bg-gray-100">
+                        SignUp
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Mobile Menu Button (Only on Mobile) */}
@@ -113,8 +146,7 @@ const Navbar = ({ cartItems }) => {
       </div>
 
       {/* ===== Lower Navbar ===== */}
-
-      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-300/20 dark:bg-rose-100/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm mt-1">
+      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-300/20 dark:bg-rose-100/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm mt-1 relative z-[500]">
         <div className="sm:flex justify-center hidden">
           <ul className="sm:flex items-center md:gap-12 py-2">
             {Menu.map((data) => (
@@ -151,51 +183,47 @@ const Navbar = ({ cartItems }) => {
             </li>
           </ul>
         </div>
+      </div>
 
-        {/*  ===== Mobile Menu ===== */}
-
-        <div
-          className={`sm:hidden ${
-            menuOpen ? "block" : "hidden"
-          } bg-gray-100 dark:bg-slate-900 py-4`}
-        >
-          <ul className="flex flex-col items-center gap-5 w-full">
-            {/* Search */}
-            <li>
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-[300px] rounded-lg border border-gray-300 py-1 px-2 text-sm focus:outline-none dark:border-gray-500 dark:bg-slate-800"
-              />
+      <div
+        className={`sm:hidden ${
+          menuOpen ? "block" : "hidden"
+        } bg-gray-100 dark:bg-slate-900 py-4`}
+      >
+        <ul className="flex flex-col items-center gap-5 w-full">
+          {/* Nav Links */}
+          {Menu.map((data) => (
+            <li key={data.id}>
+              <Link
+                to={data.link}
+                className="inline-block px-4 hover:text-primary duration-200"
+              >
+                {data.name}
+              </Link>
             </li>
+          ))}
 
-            <li>
-            <button className="border border-black dark:border-white mx-4 px-4 py-1 rounded">
-                Login
-              </button>
-              <button className="border border-black dark:border-white px-4 py-1 rounded">
-                SignUp
-              </button>
-            </li>
-
-            {/* Nav Links */}
-            {Menu.map((data) => (
-              <li key={data.id}>
-                <Link
-                  to={data.link}
-                  className="inline-block px-4 hover:text-primary duration-200"
-                >
-                  {data.name}
-                </Link>
-              </li>
-            ))}
-
-            {/* Dark Mode
-            <li>
-              <DarkMode />
-            </li> */}
-          </ul>
-        </div>
+          <li className="group relative cursor-pointer">
+            <a className="flex items-center gap-[2px] py-2">
+              Trending Products
+              <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
+            </a>
+            <div className="absolute z-50 hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md">
+              <ul>
+                {DropdownLinks.map((data) => (
+                  <li key={data.id}>
+                    <button
+                      onClick={() => handleNavigateAndScroll(data.sectionId)}
+                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20 text-left"
+                    >
+                      {data.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   );

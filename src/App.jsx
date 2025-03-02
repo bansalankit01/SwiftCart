@@ -26,6 +26,8 @@ import Summervibes from "./components/Shop The Look/Summervibes";
 import Wintercozy from "./components/Shop The Look/Wintercozy";
 import Autumnelegance from "./components/Shop The Look/Autumnelegance";
 import Monsoonmagic from "./components/Shop The Look/Monsoonmagic";
+import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
 // import { motion } from "framer-motion";
 
 function App() {
@@ -105,6 +107,8 @@ function App() {
           <Route path="/Wintercozy" element={<Wintercozy addToCart={addToCart} />} />
           <Route path="/Autumnelegance" element={<Autumnelegance addToCart={addToCart} />} />
           <Route path="/Monsoonmagic" element={<Monsoonmagic addToCart={addToCart} />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           
         </Routes>
 

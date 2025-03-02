@@ -37,7 +37,7 @@ const TopProducts = ({ addToCart }) => {
   };
 
   return (
-    <div className="container py-10 px-5">
+    <div id="bestselling" className="container py-10 px-5">
       <div data-aos="fade-up" className="text-center mb-20">
         <h1 className="md:text-4xl text-3xl md:mt-[-10px] font-extrabold text-gray-900 dark:text-white ">
         ❤️‍🔥 𝑩𝒆𝒔𝒕 𝑺𝒆𝒍𝒍𝒊𝒏𝒈 𝑷𝒊𝒄𝒌𝒔 ❤️‍🔥
