@@ -71,10 +71,9 @@ const Cart = ({ cartItems, setCartItems }) => {
             ))}
           </ul>
 
-          <div className="flex justify-between items-center gap-10 mt-6">
+          <div data-aos="fade-up" className="flex justify-between items-center gap-10 mt-6">
             <Link to="/">
-              <button
-                data-aos="fade-up"
+              <button      
                 className="bg-gray-800 dark:bg-primary text-white px-5 py-2 rounded-md hover:bg-gray-700 transition"
               >
                 Continue Shopping
@@ -82,7 +81,6 @@ const Cart = ({ cartItems, setCartItems }) => {
             </Link>
             <Link to="/">
               <button
-                data-aos="fade-up"
                 className="bg-green-500 text-white px-5 py-2 rounded-md hover:bg-green-600 transition"
               >
                 Proceed to Checkout

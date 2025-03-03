@@ -16,6 +16,7 @@ import Img44 from "../../assets/Shop the look/pic44-Photoroom.png";
 import Img45 from "../../assets/Shop the look/pic30-Photoroom.png";
 
 import { useState } from "react";
+import { BsHeart } from "react-icons/bs";
 
 const ProductsData1 = [
   {
@@ -133,11 +134,20 @@ const ProductsData1 = [
   },
 ];
 
-const Autumnelegance = ({ addToCart }) => {
+const Autumnelegance = ({ addToCart, addTowhishlist }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [sortOrder, setSortOrder] = useState(""); // "asc" or "desc"
   const [loading, setLoading] = useState(null);
+  const [wishlistloading, setWishlistLoading] = useState(null);
+
+  const handleAddToWishlist = (product) => {
+    setWishlistLoading(product.id);
+    setTimeout(() => {
+      addTowhishlist(product);
+      setWishlistLoading(null);
+    }, 500);
+  };
 
   // Filter & Search Logic
   const filteredProducts = ProductsData1.filter((product) => {
@@ -237,6 +247,16 @@ const Autumnelegance = ({ addToCart }) => {
                   <p className="text-red-500 font-extrabold mt-3 text-lg">
                     {product.price}
                   </p>
+                  <button
+                    className=" text-black dark:text-white py-3 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:border-2 dark:hover:text-white transition-all duration-500 shadow-lg hover:shadow-xl"
+                    onClick={() => handleAddToWishlist(product)}
+                    disabled={wishlistloading === product.id}
+                  >
+                    <BsHeart className="hidden sm:inline" />
+                    {wishlistloading === product.id
+                      ? "Adding..."
+                      : "Add to Wishlist"}
+                  </button>
                   <button
                     className="mt-5 w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white flex items-center justify-center gap-2 transition-all duration-500 shadow-lg hover:shadow-xl dark:hover:bg-gray-800 dark:hover:text-white relative overflow-hidden before:absolute before:w-full before:h-full before:bg-white/20 before:top-0 before:left-0 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500"
                     onClick={() => handleAddToCart(product)}

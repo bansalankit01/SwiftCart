@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { BsHeart } from "react-icons/bs";
 
 const fashionCategories = [
   {
@@ -30,9 +31,10 @@ const fashionCategories = [
   },
 ];
 
-const UniqueSections = ({ addToCart }) => {
+const UniqueSections = ({ addToCart, addTowhishlist }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [loading, setLoading] = useState(null);
+  const [wishlistloading, setWishlistLoading] = useState(null);
 
   const celebrityClosetData = [
     {
@@ -112,8 +114,16 @@ const UniqueSections = ({ addToCart }) => {
   const handleQuickBuy = (item) => {
     setLoading(item.title);
     setTimeout(() => {
-      addToCart(item); 
+      addToCart(item);
       setLoading(null);
+    }, 500);
+  };
+
+  const handleAddToWishlist = (product) => {
+    setWishlistLoading(product.id);
+    setTimeout(() => {
+      addTowhishlist(product);
+      setWishlistLoading(null);
     }, 500);
   };
 
@@ -123,12 +133,11 @@ const UniqueSections = ({ addToCart }) => {
     "Emerald Green": "#50C878",
     "Royal Purple": "#7851A9",
     "Golden Yellow": "#FFD700",
-    "Soft Lavender": "#E6E6FA"
+    "Soft Lavender": "#E6E6FA",
   };
-  
+
   return (
     <div className="space-y-12 p-6">
-
       {/* Style Inspirations Section */}
 
       <section>
@@ -193,10 +202,16 @@ const UniqueSections = ({ addToCart }) => {
       {/* Shop the Look Section */}
 
       <section>
-        <h2 data-aos="fade-up" className="md:text-4xl text-3xl mt-[20px] mx-14 md:mx-1 mb-14 md:mt-[16px] md:mb-14 font-extrabold">
+        <h2
+          data-aos="fade-up"
+          className="md:text-4xl text-3xl mt-[20px] mx-14 md:mx-1 mb-14 md:mt-[16px] md:mb-14 font-extrabold"
+        >
           𝑺𝒉𝒐𝒑 𝒕𝒉𝒆 𝑳𝒐𝒐𝒌 🛍️
         </h2>
-        <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div
+          data-aos="fade-up"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
           {[
             {
               img: "https://img.freepik.com/free-vector/flat-frame-template-summertime-season_23-2150320861.jpg?uid=R185957045&ga=GA1.1.1093141504.1716553820&semt=ais_hybrid",
@@ -248,7 +263,10 @@ const UniqueSections = ({ addToCart }) => {
 
       {/* style quest Section */}
 
-      <section data-aos="zoom-in" className="text-center my-12 p-8 bg-gradient-to-r from-red-500 to-indigo-300 dark:from-gray-500 dark:to-gray-700 rounded-xl shadow-lg">
+      <section
+        data-aos="zoom-in"
+        className="text-center my-12 p-8 bg-gradient-to-r from-red-500 to-indigo-300 dark:from-gray-500 dark:to-gray-700 rounded-xl shadow-lg"
+      >
         <h2 className="text-3xl font-bold text-white mb-4">𝑺𝒕𝒚𝒍𝒆 𝑸𝒖𝒆𝒔𝒕 🛍️</h2>
         <p className="text-lg text-white mb-6">
           𝑪𝒉𝒐𝒐𝒔𝒆 𝒚𝒐𝒖𝒓 𝒔𝒕𝒚𝒍𝒆 𝒑𝒆𝒓𝒔𝒐𝒏𝒂 & 𝒔𝒉𝒐𝒑 𝒚𝒐𝒖𝒓 𝒍𝒐𝒐𝒌!
@@ -263,7 +281,7 @@ const UniqueSections = ({ addToCart }) => {
               whileHover={{ scale: 1.05 }}
             >
               <h3 className="text-xl font-bold mb-2">{category.title}</h3>
-              <p className="text-gray-700">{category.description}</p>
+              <p className="text-gray-700 dark">{category.description}</p>
             </motion.div>
           ))}
         </div>
@@ -275,7 +293,9 @@ const UniqueSections = ({ addToCart }) => {
             transition={{ duration: 0.5 }}
             className="mt-8 p-6 bg-white rounded-lg shadow-lg flex flex-col items-center"
           >
-            <h3 className="text-2xl font-bold">{selectedCategory.title}</h3>
+            <h3 className="text-2xl font-bold text-red-500">
+              {selectedCategory.title}
+            </h3>
             <img
               src={selectedCategory.image}
               alt={selectedCategory.title}
@@ -324,6 +344,16 @@ const UniqueSections = ({ addToCart }) => {
                 </p>
 
                 <button
+                  className=" text-black dark:text-white py-3 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:border-2 dark:hover:text-white transition-all duration-500 shadow-lg hover:shadow-xl"
+                  onClick={() => handleAddToWishlist(item)}
+                  disabled={wishlistloading === item.id}
+                >
+                  <BsHeart className="hidden sm:inline" />
+                  {wishlistloading === item.id
+                    ? "Adding..."
+                    : "Add to Wishlist"}
+                </button>
+                <button
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full dark:hover:bg-gray-300 dark:hover:text-black transition-all duration-500 shadow-md hover:shadow-lg"
                   onClick={() => handleQuickBuy(item)}
                   disabled={loading === item.title}
@@ -338,22 +368,26 @@ const UniqueSections = ({ addToCart }) => {
 
       {/* Trending Colors & Styles Section */}
 
-      <section data-aos="zoom-in" className="my-12 text-center">
-      <h2 className="md:text-4xl text-2xl md:mb-14 mb-12 font-extrabold">𝑻𝒓𝒆𝒏𝒅𝒊𝒏𝒈 𝑪𝒐𝒍𝒐𝒓𝒔 & 𝑺𝒕𝒚𝒍𝒆𝒔 🎨</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-        {Object.entries(colorStyles).map(([colorName, colorHex], index) => (
-          <div key={index} className="relative group">
-            <div
-              className="h-32 w-32 rounded-2xl transition-transform transform group-hover:rotate-6 shadow-xl mx-auto"
-              style={{ backgroundColor: colorHex }}
-            ></div>
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-2xl">
-              <span className="text-white text-lg font-semibold">{colorName}</span>
+      <section id="trendingcolor" data-aos="zoom-in" className="my-12 text-center">
+        <h2 className="md:text-4xl text-2xl md:mb-14 mb-12 font-extrabold">
+          𝑻𝒓𝒆𝒏𝒅𝒊𝒏𝒈 𝑪𝒐𝒍𝒐𝒓𝒔 🎨
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {Object.entries(colorStyles).map(([colorName, colorHex], index) => (
+            <div key={index} className="relative group">
+              <div
+                className="h-32 w-32 rounded-2xl transition-transform transform group-hover:rotate-6 shadow-xl mx-auto"
+                style={{ backgroundColor: colorHex }}
+              ></div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-2xl">
+                <span className="text-white text-lg font-semibold">
+                  {colorName}
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

@@ -6,7 +6,9 @@ import { FaCaretDown } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import DarkMode from "./DarkMode";
 import companyname from "../../assets/website/companyname.png";
-import { FaUserCircle } from "react-icons/fa";
+// import { FaUserCircle } from "react-icons/fa";
+import { SlUser } from "react-icons/sl";
+import { BsHeart } from "react-icons/bs";
 
 const Menu = [
   { id: 1, name: "Home", link: "/" },
@@ -18,10 +20,12 @@ const Menu = [
 const DropdownLinks = [
   { id: 1, name: "Trending Deal's & Offer", sectionId: "trendingdeal" },
   { id: 2, name: "Best Selling Picks", sectionId: "bestselling" },
+  { id: 3, name: "Trending colors", sectionId: "trendingcolor" },
 ];
 
-const Navbar = ({ cartItems }) => {
+const Navbar = ({ cartItems, whishlistitems }) => {
   const cartItemCount = cartItems.length;
+  const wishlistItemCount = whishlistitems.length;
   const [menuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -66,19 +70,28 @@ const Navbar = ({ cartItems }) => {
       {/* ===== Upper Navbar ===== */}
       <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-500/20 dark:bg-rose-200/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm relative z-[1000]">
         <div className="container flex justify-between items-center py-4 relative">
+          {/* Mobile Menu Button (Only on Mobile) */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="sm:hidden text-black dark:text-white text-3xl"
+          >
+            <RxHamburgerMenu />
+          </button>
+
           {/* Logo */}
           <Link to="/" className="font-bold text-xl items-center h-6 flex">
             <img
               src={companyname}
-              className="md:w-[230px] w-[225px] mx-[-25px]"
+              className="md:w-[230px] w-[225px] md:mx-[-25px] mx-[-40px]"
               alt=""
             />
           </Link>
 
           {/* Cart, Dark Mode, Login/Signup (Right Aligned) */}
-          <div className="flex items-center gap-3">
+
+          <div className="flex items-center md:gap-8">
             {/* Search Bar (Centered) */}
-            <div className="hidden md:flex justify-center flex-grow">
+            {/* <div className="hidden md:flex justify-center flex-grow">
               <div className="relative">
                 <input
                   type="text"
@@ -87,35 +100,16 @@ const Navbar = ({ cartItems }) => {
                 />
                 <IoMdSearch className="text-slate-10 absolute top-1/2 -translate-y-1/2 right-3" />
               </div>
-            </div>
+            </div> */}
 
-            {/* Cart Button */}
-            <div className="relative">
-              <Link
-                to="/cart"
-                className="text-white py-2 px-1 rounded-lg flex items-center"
-              >
-                <FaCartShopping className="text-3xl text-black dark:text-white" />
-              </Link>
-              {cartItemCount > 0 && (
-                <span className="absolute -top-0 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-                  {cartItemCount}
-                </span>
-              )}
-            </div>
-
-            {/* Dark Mode */}
-            <DarkMode />
-
-            {/* Login / Signup (Fixed Dropdown Issue) */}
+            {/* Login / Signup */}
             <div className="relative" ref={dropdownRef}>
               <button
-                className="flex items-center text-3xl py-2"
+                className="flex items-center text-2xl py-2 md:mx-4"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                <FaUserCircle />
+                <SlUser />
               </button>
-
               {isOpen && (
                 <div className="absolute right-0 mt-3 w-[200px] rounded-md bg-white p-3 text-black shadow-xl border border-gray-300 z-[9999]">
                   <div className="flex flex-col items-center gap-2">
@@ -132,23 +126,67 @@ const Navbar = ({ cartItems }) => {
                   </div>
                 </div>
               )}
+              {/* Hide Profile text on mobile */}
+              <div className="mt-[-8px]">
+                <span className="hidden sm:inline md:mt-[-10px] md:mx-1 text-sm text-black dark:text-white">
+                  𝑷𝒓𝒐𝒇𝒊𝒍𝒆
+                </span>
+              </div>
             </div>
 
-            {/* Mobile Menu Button (Only on Mobile) */}
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="sm:hidden text-black dark:text-white text-3xl"
-            >
-              <RxHamburgerMenu />
-            </button>
+            {/* Wishlist */}
+            <div className="relative">
+              <Link
+                to="/whishlist"
+                className="text-white py-2 px-1 rounded-lg flex items-center"
+              >
+                <BsHeart className="text-2xl text-black dark:text-white mx-4" />
+              </Link>
+              {wishlistItemCount > 0 && (
+                <span className="absolute -top-0 -right-0 mx-[10px] bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                  {wishlistItemCount}
+                </span>
+              )}
+              {/* Hide Wishlist text on mobile */}
+              <div className="mt-[-8px]">
+                <span className="hidden sm:inline md:mt-[-10px] text-md text-black dark:text-white">
+                  𝑾𝒊𝒔𝒉𝒍𝒊𝒔𝒕
+                </span>
+              </div>
+            </div>
+
+            {/* Cart */}
+            <div className="relative">
+              <Link
+                to="/cart"
+                className="text-white py-2 px-1 rounded-lg flex items-center"
+              >
+                <FaCartShopping className="text-2xl text-black dark:text-white" />
+              </Link>
+              {cartItemCount > 0 && (
+                <span className="absolute -top-0 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                  {cartItemCount}
+                </span>
+              )}
+              {/* Hide Cart text on mobile */}
+              <div className="mt-[-8px]">
+                <span className="hidden sm:inline md:mt-[-10px] text-md text-black dark:text-white">
+                  𝑪𝒂𝒓𝒕
+                </span>
+              </div>
+            </div>
+
+            <div className="hidden sm:block">
+              <DarkMode />
+            </div>
           </div>
         </div>
       </div>
 
       {/* ===== Lower Navbar ===== */}
-      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-300/20 dark:bg-rose-100/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm mt-1 relative z-[500]">
-        <div className="sm:flex justify-center hidden">
-          <ul className="sm:flex items-center md:gap-12 py-2">
+      <div className="shadow-lg  border border-white/30 dark:border-slate-700/50 bg-pink-300/20 dark:bg-rose-100/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm mt-1 relative z-[500]">
+        <div className="sm:flex justify-between  md:mx-[310px] hidden">
+          <ul className="sm:flex items-center md:gap-12 py-2 ">
             {Menu.map((data) => (
               <li key={data.id}>
                 <Link
@@ -185,13 +223,13 @@ const Navbar = ({ cartItems }) => {
         </div>
       </div>
 
-{/* Mobile view  */}
+      {/* Mobile view */}
       <div
         className={`sm:hidden ${
           menuOpen ? "block" : "hidden"
         } bg-gray-100 dark:bg-slate-900 py-4`}
       >
-        <ul className="flex flex-col items-center gap-5 w-full">
+        <ul className="flex flex-col items-left mx-1 gap-5 w-full">
           {/* Nav Links */}
           {Menu.map((data) => (
             <li key={data.id}>
@@ -204,7 +242,8 @@ const Navbar = ({ cartItems }) => {
             </li>
           ))}
 
-          <li className="group relative cursor-pointer">
+          {/* Dropdown */}
+          <li className="group relative cursor-pointer mx-4">
             <a className="flex items-center gap-[2px] py-2">
               Trending Products
               <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
@@ -223,6 +262,11 @@ const Navbar = ({ cartItems }) => {
                 ))}
               </ul>
             </div>
+          </li>
+
+          {/* Dark Mode (Only in Mobile Menu) */}
+          <li className="mx-4">
+            <DarkMode />
           </li>
         </ul>
       </div>

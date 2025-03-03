@@ -28,14 +28,20 @@ import Autumnelegance from "./components/Shop The Look/Autumnelegance";
 import Monsoonmagic from "./components/Shop The Look/Monsoonmagic";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
+import Whishlist from "./components/Whishlist/Whishlist";
 // import { motion } from "framer-motion";
 
 function App() {
   const [cartItems, setCartItems] = useState([]); // Store cart items
+  const [whishlistitems, setWhishlistItems] = useState([]); // Store whishlist items
   // const [orderPopup, setOrderPopup] = useState(false);
 
   const addToCart = (product) => {
     setCartItems((prevItems) => [...prevItems, product]);
+  };
+
+  const addTowhishlist = (product) => {
+    setWhishlistItems((prevItems) => [...prevItems, product]);
   };
 
   // const handleOrderPopup = () => {
@@ -55,7 +61,7 @@ function App() {
   return (
     <Router>
       <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-        <Navbar cartItems={cartItems} />
+        <Navbar cartItems={cartItems} whishlistitems={whishlistitems}  />
 
         <Routes>
           <Route
@@ -68,45 +74,46 @@ function App() {
                 <br />
                 <Products />
                 <br />
-                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
+                <hr className="md:w-[98%] w-[85%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
                 <Banner />
                 <br />
-                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
+                <hr className="md:w-[98%] w-[85%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
                 <br />
-                <TopProducts addToCart={addToCart}  />
+                <TopProducts addToCart={addToCart} addTowhishlist={addTowhishlist} />
                 <br />              
                 <br />              
                 <br />
-                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
+                <hr className="md:w-[98%] w-[85%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
                 <br />              
                 <br />              
                 {/* <Subscribe />  */}
-              <UniqueSection addToCart={addToCart} />
-                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
+              <UniqueSection addToCart={addToCart} addTowhishlist={addTowhishlist} />
+                <hr className="md:w-[98%] w-[85%] mx-auto border-gray-300 dark:border-gray-800 my-3" />
                 <br />               
                 <br />               
                 <br />               
                 <Testimonials /> 
                 <br />
                 <br />
-                <hr className="w-[98%] mx-auto border-gray-300 dark:border-gray-800 my-3" />            
+                <hr className="md:w-[98%] w-[85%] mx-auto border-gray-300 dark:border-gray-800 my-3" />            
               </>
             }
           />
-          <Route path="/mens" element={<Men addToCart={addToCart} />} />
-          <Route path="/womens" element={<Women addToCart={addToCart} />} />
-          <Route path="/kids" element={<Kids addToCart={addToCart} />} />
+          <Route path="/mens" element={<Men addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
+          <Route path="/womens" element={<Women addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
+          <Route path="/kids" element={<Kids addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
           <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} />} />
+          <Route path="/whishlist" element={<Whishlist whishlistitems={whishlistitems} setWhishlistItems={setWhishlistItems} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/casualwear" element={<Casualwear addToCart={addToCart} />} />
-          <Route path="/streetwear" element={<Streetwear addToCart={addToCart} />} />
-          <Route path="/denimedge" element={<Denimedge addToCart={addToCart} />} />
-          <Route path="/athleisure" element={<Athleisure addToCart={addToCart} />} />
-          <Route path="/Summervibes" element={<Summervibes addToCart={addToCart} />} />
-          <Route path="/Wintercozy" element={<Wintercozy addToCart={addToCart} />} />
-          <Route path="/Autumnelegance" element={<Autumnelegance addToCart={addToCart} />} />
-          <Route path="/Monsoonmagic" element={<Monsoonmagic addToCart={addToCart} />} />
+          <Route path="/casualwear" element={<Casualwear addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
+          <Route path="/streetwear" element={<Streetwear addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
+          <Route path="/denimedge" element={<Denimedge addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
+          <Route path="/athleisure" element={<Athleisure addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
+          <Route path="/Summervibes" element={<Summervibes addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
+          <Route path="/Wintercozy" element={<Wintercozy addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
+          <Route path="/Autumnelegance" element={<Autumnelegance addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
+          <Route path="/Monsoonmagic" element={<Monsoonmagic addToCart={addToCart} addTowhishlist={addTowhishlist} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           

@@ -74,7 +74,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="py-20 md:w-[95%] w-[90%] md:mx-10 mx-6 rounded-3xl bg-gradient-to-r from-blue-100 via-purple-200 to-pink-200 dark:from-gray-500 dark:via-purple-300 dark:to-blue-300">
+    <div className="py-20 md:w-[95%] w-[90%] md:mx-10 mx-5 rounded-3xl bg-gradient-to-r from-blue-100 via-purple-200 to-pink-200 dark:from-gray-500 dark:via-purple-300 dark:to-blue-300">
       <div className="container mx-auto mt-[-20px]">
         <div data-aos="zoom-in" className="text-center mb-12">
           <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="md:text-4xl text-2xl font-extrabold text-gray-900 dark:text-black">

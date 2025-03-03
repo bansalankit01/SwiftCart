@@ -19,7 +19,7 @@ import companyname from "../../assets/website/companyname.png";
 
 const Footer = () => {
   return (
-    <div className="md:mx-10 mx-6 mt-12 rounded-3xl text-white bg-pink-300/20 dark:bg-rose-100/20 bg-opacity-30 backdrop-blur-lg border border-white/20 dark:border-white/30 md:w-[95%] w-[90%]">
+    <div className="md:mx-10 mx-5 mt-12 rounded-3xl text-white bg-pink-300/20 dark:bg-rose-100/20 bg-opacity-30 backdrop-blur-lg border border-white/20 dark:border-white/30 md:w-[95%] w-[90%]">
       <div className="container md:h-[350px] ">
         <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-10 pt-8">
           {/* Company Details */}

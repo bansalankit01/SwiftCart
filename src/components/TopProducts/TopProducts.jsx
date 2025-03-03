@@ -10,23 +10,92 @@ import Img7 from "../../assets/shirt/product6-Photoroom.png";
 import Img8 from "../../assets/shirt/product7-Photoroom.png";
 import Img9 from "../../assets/mens collection/pic16-Photoroom.png";
 import Img10 from "../../assets/women collection/pic1-Photoroom.png";
+import { BsHeart } from "react-icons/bs";
 
 const ProductsData = [
-  { id: 1, img: Img1, title: "More & More Unisex-Adult Hooded Sweatshirt", price: "₹599", rating: 4.5 },
-  { id: 2, img: Img2, title: "THE ARCHER Men's Slim Fit Vest Pack of 2", price: "₹449", rating: 4.2 },
-  { id: 3, img: Img3, title: "Indya Women's Georgette Floral Kurta", price: "₹1,600", rating: 4.7 },
-  { id: 4, img: Img4, title: "FEICE Watches for Men Automatic Watch", price: "₹29,749", rating: 5 },
-  { id: 5, img: Img5, title: "Hopscotch Girls Viscose Blouse & Shorts Set", price: "₹899", rating: 4.3 },
-  { id: 6, img: Img6, title: "Symbol Premium Men's Formal Derby Shoes", price: "₹2,399", rating: 4.6 },
-  { id: 7, img: Img7, title: "Karsaer Oversized Rimless Sunglasses", price: "₹2,999", rating: 4.8 },
-  { id: 8, img: Img8, title: "MODARUE Anime T-Shirt for Boys", price: "₹999", rating: 4.4 },
-  { id: 9, img: Img9, title: "Pashmoda Men Jamawar Pashmina Shawl", price: "₹1,087", rating: 4.1 },
-  { id: 10, img: Img10, title: "AKHILAM Women's Georgette Saree", price: "₹2,029", rating: 4.9 },
+  {
+    id: 1,
+    img: Img1,
+    title: "More & More Unisex-Adult Hooded Sweatshirt",
+    price: "₹599",
+    rating: 4.5,
+  },
+  {
+    id: 2,
+    img: Img2,
+    title: "THE ARCHER Men's Slim Fit Vest Pack of 2",
+    price: "₹449",
+    rating: 4.2,
+  },
+  {
+    id: 3,
+    img: Img3,
+    title: "Indya Women's Georgette Floral Kurta",
+    price: "₹1,600",
+    rating: 4.7,
+  },
+  {
+    id: 4,
+    img: Img4,
+    title: "FEICE Watches for Men Automatic Watch",
+    price: "₹29,749",
+    rating: 5,
+  },
+  {
+    id: 5,
+    img: Img5,
+    title: "Hopscotch Girls Viscose Blouse & Shorts Set",
+    price: "₹899",
+    rating: 4.3,
+  },
+  {
+    id: 6,
+    img: Img6,
+    title: "Symbol Premium Men's Formal Derby Shoes",
+    price: "₹2,399",
+    rating: 4.6,
+  },
+  {
+    id: 7,
+    img: Img7,
+    title: "Karsaer Oversized Rimless Sunglasses",
+    price: "₹2,999",
+    rating: 4.8,
+  },
+  {
+    id: 8,
+    img: Img8,
+    title: "MODARUE Anime T-Shirt for Boys",
+    price: "₹999",
+    rating: 4.4,
+  },
+  {
+    id: 9,
+    img: Img9,
+    title: "Pashmoda Men Jamawar Pashmina Shawl",
+    price: "₹1,087",
+    rating: 4.1,
+  },
+  {
+    id: 10,
+    img: Img10,
+    title: "AKHILAM Women's Georgette Saree",
+    price: "₹2,029",
+    rating: 4.9,
+  },
 ];
 
-const TopProducts = ({ addToCart }) => {
-  
+const TopProducts = ({ addToCart, addTowhishlist }) => {
   const [loading, setLoading] = useState(null);
+  const [wishlistloading, setWishlistLoading] = useState(null);
+
+  const handleAddToWishlist = (product) => {
+    setWishlistLoading(product.id);
+    setTimeout(() => {
+      addTowhishlist(product);
+      setWishlistLoading(null);
+    }, 500);
+  };
 
   const handleAddToCart = (product) => {
     setLoading(product.id);
@@ -36,18 +105,23 @@ const TopProducts = ({ addToCart }) => {
     }, 500);
   };
 
+ 
+
   return (
     <div id="bestselling" className="container py-10 px-5">
       <div data-aos="fade-up" className="text-center mb-20">
         <h1 className="md:text-4xl text-3xl md:mt-[-10px] font-extrabold text-gray-900 dark:text-white ">
-        ❤️‍🔥 𝑩𝒆𝒔𝒕 𝑺𝒆𝒍𝒍𝒊𝒏𝒈 𝑷𝒊𝒄𝒌𝒔 ❤️‍🔥
+          ❤️‍🔥 𝑩𝒆𝒔𝒕 𝑺𝒆𝒍𝒍𝒊𝒏𝒈 𝑷𝒊𝒄𝒌𝒔 ❤️‍🔥
         </h1>
         <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base mt-4">
-           𝑬𝒍𝒆𝒗𝒂𝒕𝒆 𝒚𝒐𝒖𝒓 𝒘𝒂𝒓𝒅𝒓𝒐𝒃𝒆 𝒘𝒊𝒕𝒉 𝒃𝒆𝒔𝒕-𝒔𝒆𝒍𝒍𝒊𝒏𝒈 𝒕𝒓𝒆𝒏𝒅𝒔!
+          𝑬𝒍𝒆𝒗𝒂𝒕𝒆 𝒚𝒐𝒖𝒓 𝒘𝒂𝒓𝒅𝒓𝒐𝒃𝒆 𝒘𝒊𝒕𝒉 𝒃𝒆𝒔𝒕-𝒔𝒆𝒍𝒍𝒊𝒏𝒈 𝒕𝒓𝒆𝒏𝒅𝒔!
         </p>
       </div>
 
-      <div data-aos="fade-up" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 md:gap-8 gap-5 place-items-center">
+      <div
+        data-aos="fade-up"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 md:gap-8 gap-5 place-items-center"
+      >
         {ProductsData.map((product) => (
           <div
             key={product.id}
@@ -76,9 +150,22 @@ const TopProducts = ({ addToCart }) => {
                   />
                 ))}
               </div>
-              <p className="text-red-500 font-extrabold mt-3 text-lg">{product.price}</p>
+              <p className="text-red-500 font-extrabold mt-3 text-lg">
+                {product.price}
+              </p>
               <button
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3  rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg"
+                className=" text-black dark:text-white py-3 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:border-2 dark:hover:text-white transition-all duration-500 shadow-lg hover:shadow-xl"
+                onClick={() => handleAddToWishlist(product)}
+                disabled={wishlistloading === product.id}
+              >
+                <BsHeart className="hidden sm:inline" />
+                {wishlistloading === product.id
+                  ? "Adding..."
+                  : "Add to Wishlist"}
+              </button>
+
+              <button
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 rounded-lg mt-5 w-full flex items-center justify-center gap-2 dark:hover:bg-white dark:hover:text-white transition-all duration-500 shadow-md hover:shadow-lg"
                 onClick={() => handleAddToCart(product)}
                 disabled={loading === product.id}
               >

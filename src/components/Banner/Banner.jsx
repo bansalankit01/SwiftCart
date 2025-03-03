@@ -10,7 +10,7 @@ function Banner() {
       <div className='conatiner'>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 items-center'>
             <div data-aos="zoom-in">
-                <img className='md:max-w-[400px] max-w-[280px] md:h-[400px] mb-4 w-full mx-auto object-cover' src="https://img.freepik.com/free-vector/hand-drawn-winter-sale_23-2148724388.jpg?t=st=1739012389~exp=1739015989~hmac=26c294fdb4a95e36a1e5745ff0e71cf8b36482d856ed03222827adfc145e89f5&w=740" alt="Banner image" />
+                <img className='md:max-w-[400px] max-w-[300px] md:h-[400px] mb-4 w-full mx-auto object-cover' src="https://img.freepik.com/free-vector/hand-drawn-winter-sale_23-2148724388.jpg?t=st=1739012389~exp=1739015989~hmac=26c294fdb4a95e36a1e5745ff0e71cf8b36482d856ed03222827adfc145e89f5&w=740" alt="Banner image" />
             </div>
             <div className='flex flex-col justify-center gap-6 sm:pt-0'>
                 <h1 data-aos="fade-up" className='text-2xl mx-5 sm:text-4xl font-bold'>𝑾𝒉𝒚 𝑺𝒉𝒐𝒑 𝒘𝒊𝒕𝒉 𝑺𝒘𝒊𝒇𝒕𝑪𝒂𝒓𝒕 ?</h1>
