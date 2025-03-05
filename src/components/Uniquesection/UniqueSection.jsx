@@ -354,7 +354,7 @@ const UniqueSections = ({ addToCart, addTowhishlist }) => {
                     : "Add to Wishlist"}
                 </button>
                 <button
-                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 px-6 rounded-lg mt-5 w-full dark:hover:bg-gray-300 dark:hover:text-black transition-all duration-500 shadow-md hover:shadow-lg"
+                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white py-3 rounded-lg mt-5 w-full dark:hover:bg-gray-300 dark:hover:text-black transition-all duration-500 shadow-md hover:shadow-lg"
                   onClick={() => handleQuickBuy(item)}
                   disabled={loading === item.title}
                 >
