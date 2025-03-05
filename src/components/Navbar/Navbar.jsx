@@ -68,7 +68,7 @@ const Navbar = ({ cartItems, whishlistitems }) => {
   return (
     <div className="z-40 sticky top-0">
       {/* ===== Upper Navbar ===== */}
-      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-500/20 dark:bg-rose-200/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm relative z-[1000]">
+      <div className="shadow-lg border border-white/30 dark:border-slate-700/50 bg-pink-500/20 dark:bg-teal-200/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm relative z-[1000]">
         <div className="container flex justify-between items-center py-4 relative">
           {/* Mobile Menu Button (Only on Mobile) */}
           <button
@@ -184,7 +184,7 @@ const Navbar = ({ cartItems, whishlistitems }) => {
       </div>
 
       {/* ===== Lower Navbar ===== */}
-      <div className="shadow-lg  border border-white/30 dark:border-slate-700/50 bg-pink-300/20 dark:bg-rose-100/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm mt-1 relative z-[500]">
+      <div className="shadow-lg  border border-white/30 dark:border-slate-700/50 bg-pink-300/20 dark:bg-teal-100/20 backdrop-blur-xl dark:text-white duration-200 rounded-sm mt-1 relative z-[500]">
         <div className="sm:flex justify-between  md:mx-[310px] hidden">
           <ul className="sm:flex items-center md:gap-12 py-2 ">
             {Menu.map((data) => (

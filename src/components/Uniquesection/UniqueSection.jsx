@@ -358,7 +358,7 @@ const UniqueSections = ({ addToCart, addTowhishlist }) => {
                   onClick={() => handleQuickBuy(item)}
                   disabled={loading === item.title}
                 >
-                  {loading === item.title ? "Buying..." : "Quick Buy"}
+                  {loading === item.title ? "Adding..." : "Add to Cart"}
                 </button>
               </div>
             </motion.div>

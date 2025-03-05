@@ -8,7 +8,7 @@ const Whishlist = ({ whishlistitems, setWhishlistItems }) => {
   };
 
   return (
-    <div className=" flex flex-col items-center p-10">
+    <div data-aos="fade-up" className=" flex flex-col items-center p-10">
       <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">𝑴𝒚 𝑾𝒉𝒊𝒔𝒉𝒍𝒊𝒔𝒕</h2>
 
       {whishlistitems.length === 0 ? (
@@ -26,7 +26,7 @@ const Whishlist = ({ whishlistitems, setWhishlistItems }) => {
           </Link>
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 place-items-center">
+        <div data-aos="fade-up" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 place-items-center">
           {whishlistitems.map((item, index) => (
             <div
               key={index}
